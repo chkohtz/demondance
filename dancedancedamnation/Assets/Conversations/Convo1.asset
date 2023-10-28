@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Convo1
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  lines:
+  - portrait: {fileID: 21300000, guid: ca9dcb8db681019459a26c2dc4868bf6, type: 3}
+    name: Joseph
+    line: Oh my god!!! Jotaro!! We're a conversation in a video game!!
+  - portrait: {fileID: 21300000, guid: ca9dcb8db681019459a26c2dc4868bf6, type: 3}
+    name: Joseph
+    line: this must be the work of an enemy stand!! holy shitt!!!
+  - portrait: {fileID: 21300000, guid: 5a85369ccba8a5241a9f948a3ed41072, type: 3}
+    name: Jotaro
+    line: yare yare daze
