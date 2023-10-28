@@ -5,6 +5,7 @@ using TMPro;
 
 public class ScoreController : MonoBehaviour
 {
+
     private int _score = 0;
     public int score {
         get => _score;
