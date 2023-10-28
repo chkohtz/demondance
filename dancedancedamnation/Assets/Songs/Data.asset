@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Data
+  m_EditorClassIdentifier: Assembly-CSharp::Song
+  bpm: 67
+  audioClip: {fileID: 8300000, guid: 917d3a45a90dd8e43b2f583fe18c4b3f, type: 3}
+  notes:
+  - pos: 2.33
+    holdDuration: 0
+    direction: 0
+  - pos: 3
+    holdDuration: 0
+    direction: 2
+  - pos: 5
+    holdDuration: 0
+    direction: 1
+  - pos: 5.33
+    holdDuration: 0
+    direction: 0
+  - pos: 6
+    holdDuration: 0
+    direction: 1
+  - pos: 6.66
+    holdDuration: 0
+    direction: 0
+  - pos: 7.33
+    holdDuration: 0
+    direction: 2
+  - pos: 8
+    holdDuration: 0
+    direction: 1
+  - pos: 8.33
+    holdDuration: 0
+    direction: 3
+  - pos: 9
+    holdDuration: 0
+    direction: 0
+  - pos: 9.66
+    holdDuration: 0
+    direction: 1
+  - pos: 10.33
+    holdDuration: 0
+    direction: 2
+  - pos: 11.33
+    holdDuration: 0
+    direction: 1
+  - pos: 12
+    holdDuration: 0
+    direction: 0
+  - pos: 12.66
+    holdDuration: 0
+    direction: 2
+  - pos: 13.33
+    holdDuration: 0
+    direction: 3
+  - pos: 14
+    holdDuration: 0
+    direction: 0
+  - pos: 14.33
+    holdDuration: 0
+    direction: 1
+  - pos: 15
+    holdDuration: 0
+    direction: 2
+  - pos: 15.66
+    holdDuration: 0
+    direction: 3
+  - pos: 16.33
+    holdDuration: 0
+    direction: 2
+  - pos: 17.33
+    holdDuration: 0
+    direction: 1
+  - pos: 18
+    holdDuration: 0
+    direction: 1
+  - pos: 18.66
+    holdDuration: 0
+    direction: 0
+  - pos: 19.33
+    holdDuration: 0
+    direction: 0
+  - pos: 20
+    holdDuration: 0
+    direction: 0
+  - pos: 20.33
+    holdDuration: 0
+    direction: 2
+  - pos: 21
+    holdDuration: 0
+    direction: 3
+  - pos: 21.66
+    holdDuration: 0
+    direction: 3
+  - pos: 22.33
+    holdDuration: 0
+    direction: 3
+  - pos: 23
+    holdDuration: 0
+    direction: 2
+  - pos: 23.66
+    holdDuration: 0
+    direction: 2
+  - pos: 24.33
+    holdDuration: 0
+    direction: 0
+  - pos: 25
+    holdDuration: 0
+    direction: 1
+  - pos: 25.66
+    holdDuration: 0
+    direction: 1
+  - pos: 26
+    holdDuration: 0
+    direction: 1
+  - pos: 26.33
+    holdDuration: 0
+    direction: 1
+  - pos: 27
+    holdDuration: 0
+    direction: 0
+  - pos: 27.66
+    holdDuration: 0
+    direction: 2
+  - pos: 28.33
+    holdDuration: 0
+    direction: 3
