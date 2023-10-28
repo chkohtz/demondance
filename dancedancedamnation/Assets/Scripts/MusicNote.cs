@@ -19,7 +19,7 @@ public class MusicNote : MonoBehaviour
     SongManager songManager;
     InputManager inputManager;
 
-    private float noteSpacing = 1.5f;
+    private float noteSpacing = 0.5f;
 
     [SerializeField]
     Sprite upArrow;
