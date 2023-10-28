@@ -1,24 +1,94 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InputManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject bar;
+    public GameObject bar;
+
+    public LayerMask m_LayerMask;
+
+    private Collider2D[] hitColliders;
+    private int combo;
+
+    [SerializeField]
+    TMPro.TextMeshProUGUI comboText;
+
+    [SerializeField]
+    private Animator accuracyAnim;
+
+    [SerializeField]
+    AccuracyText accuracyText;
+
+    private AudioSource inputSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        inputSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
+        comboText.text = combo.ToString();        
 
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            directionInput(Direction.Left);
         }
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            directionInput(Direction.Right);
+        }
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            directionInput(Direction.Up);
+        }
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            directionInput(Direction.Down);
+        }
+    }
+
+    void directionInput(Direction dir)
+    {
+        inputSound.Play();
+        hitColliders = Physics2D.OverlapBoxAll(bar.transform.position, bar.transform.localScale, 0, m_LayerMask);
+        Debug.Log(hitColliders.Length);
+        if (hitColliders.Length > 0)
+        {
+            foreach (Collider2D collider in hitColliders)
+            {
+                Accuracy accuracy = collider.gameObject.GetComponent<MusicNote>().registerInput(dir);
+                Destroy(collider.gameObject); // Change to cool animation later
+                accuracyText.Set(accuracy);
+                accuracyAnim.SetTrigger("Set");
+            }
+        }
+        else
+        {
+            accuracyText.Set(Accuracy.Miss);
+            accuracyAnim.SetTrigger("Set");
+            breakCombo();
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(bar.transform.position, bar.transform.localScale * 2);
+    }
+
+    public void incrementCombo()
+    {
+        combo++;
+    }
+
+    public void breakCombo()
+    {
+        combo = 0;
     }
 }

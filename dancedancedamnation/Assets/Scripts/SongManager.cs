@@ -80,3 +80,12 @@ public enum Direction
     Left,
     Right
 }
+
+public enum Accuracy
+{
+    Miss,
+    Okay,
+    Good,
+    Great,
+    Perfect
+}
