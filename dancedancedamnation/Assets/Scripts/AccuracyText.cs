@@ -13,6 +13,9 @@ public class AccuracyText : MonoBehaviour
     public Sprite great;
     public Sprite perfect;
 
+    [SerializeField]
+    ParanoiaController paranoia;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,21 +35,22 @@ public class AccuracyText : MonoBehaviour
         {
             case Accuracy.Miss:
                 sr.sprite = miss;
+                paranoia.incrementValue(40);
                 break;
             case Accuracy.Okay:
                 sr.sprite = okay;
+                paranoia.incrementValue(20);
                 break;
             case Accuracy.Good:
                 sr.sprite = good;
                 break;
             case Accuracy.Great:
                 sr.sprite = great;
+                paranoia.incrementValue(-10);
                 break;
             case Accuracy.Perfect:
                 sr.sprite = perfect;
-                break;
-            default: 
-                sr.sprite = miss;
+                paranoia.incrementValue(-25);
                 break;
         }
     }
