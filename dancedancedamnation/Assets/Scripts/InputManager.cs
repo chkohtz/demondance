@@ -22,6 +22,9 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     AccuracyText accuracyText;
 
+    [SerializeField]
+    ScoreController score;
+
     private AudioSource inputSound;
 
     // Start is called before the first frame update
@@ -66,11 +69,13 @@ public class InputManager : MonoBehaviour
                 Destroy(collider.gameObject); // Change to cool animation later
                 accuracyText.Set(accuracy);
                 accuracyAnim.SetTrigger("Set");
+                score.UpdateScore(accuracy, combo);
             }
         }
         else
         {
             accuracyText.Set(Accuracy.Miss);
+            score.UpdateScore(Accuracy.Miss, 0);
             accuracyAnim.SetTrigger("Set");
             breakCombo();
         }
