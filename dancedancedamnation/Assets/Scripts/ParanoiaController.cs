@@ -8,6 +8,9 @@ public class ParanoiaController : MonoBehaviour
     public ParanoiaBar paranoiaBar;
     public GameOverController gameOverController;
 
+    [SerializeField]
+    public Crowd crowd;
+
     public float currentVal
     {
         get => _currentVal;
@@ -33,5 +36,9 @@ public class ParanoiaController : MonoBehaviour
         {
             gameOverController.OnGameOver();
         };
+        if (currentVal <= 0)
+        {
+            crowd.Cheer();
+        }
     }
 }

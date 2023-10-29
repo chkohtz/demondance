@@ -19,7 +19,7 @@ public class PlayerAnimator : MonoBehaviour
         //Here for testing purposes
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            player.SetTrigger("Hurt");
+            //player.SetTrigger("Hurt");
             return;
         }
 

@@ -37,22 +37,23 @@ public class AccuracyText : MonoBehaviour
         {
             case Accuracy.Miss:
                 sr.sprite = miss;
-                paranoia.incrementValue(5.0f);
+                paranoia.incrementValue(20.0f);
                 break;
             case Accuracy.Okay:
                 sr.sprite = okay;
-                paranoia.incrementValue(1f);
+                paranoia.incrementValue(10f);
                 break;
             case Accuracy.Good:
                 sr.sprite = good;
+                paranoia.incrementValue(5f);
                 break;
             case Accuracy.Great:
                 sr.sprite = great;
-                paranoia.incrementValue(-0.5f);
+                paranoia.incrementValue(-10f);
                 break;
             case Accuracy.Perfect:
                 sr.sprite = perfect;
-                paranoia.incrementValue(-1.0f);
+                paranoia.incrementValue(-30f);
                 break;
         }
     }

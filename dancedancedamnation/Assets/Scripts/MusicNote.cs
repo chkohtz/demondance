@@ -31,11 +31,14 @@ public class MusicNote : MonoBehaviour
     [SerializeField]
     Sprite rightArrow;
 
+    private ParanoiaController paranoia;
+
     private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = SpawnPos;
         songManager = FindObjectOfType<SongManager>();
         inputManager = FindObjectOfType<InputManager>();
         beatOfThisNote = note.pos;
@@ -73,7 +76,7 @@ public class MusicNote : MonoBehaviour
                 break;
         }
 
-        transform.position = SpawnPos;
+        
 
     }
 
@@ -86,8 +89,8 @@ public class MusicNote : MonoBehaviour
 
         if(transform.position.Equals(RemovePos))
         {
+            inputManager.Miss();
             Destroy(gameObject);
-            inputManager.breakCombo();
         }
     }
 

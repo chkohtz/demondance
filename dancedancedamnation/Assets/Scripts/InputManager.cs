@@ -8,6 +8,9 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     public GameObject bar;
 
+    [SerializeField]
+    public PlayerAnimator playerAnim;
+
     public LayerMask m_LayerMask;
 
     private Collider2D[] hitColliders;
@@ -24,6 +27,9 @@ public class InputManager : MonoBehaviour
 
     [SerializeField]
     ScoreController score;
+
+    [SerializeField]
+    ParanoiaController paranoia;
 
     [SerializeField]
     public AudioSource arrowSoundL;
@@ -94,7 +100,6 @@ public class InputManager : MonoBehaviour
             score.UpdateScore(Accuracy.Miss, 0);
             accuracyAnim.SetTrigger("Set");
             breakCombo();
-            missSound.Play();
         }
     }
 
