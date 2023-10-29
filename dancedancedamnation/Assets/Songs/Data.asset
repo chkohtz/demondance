@@ -1,0 +1,497 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Data
+  m_EditorClassIdentifier: Assembly-CSharp::Song
+  bpm: 90
+  audioClip: {fileID: 8300000, guid: 917d3a45a90dd8e43b2f583fe18c4b3f, type: 3}
+  notes:
+  - pos: 3
+    holdDuration: 0
+    direction: 1
+  - pos: 4
+    holdDuration: 0
+    direction: 1
+  - pos: 7
+    holdDuration: 0
+    direction: 1
+  - pos: 8
+    holdDuration: 0
+    direction: 2
+  - pos: 9
+    holdDuration: 0
+    direction: 3
+  - pos: 10
+    holdDuration: 0
+    direction: 0
+  - pos: 11
+    holdDuration: 0
+    direction: 1
+  - pos: 12
+    holdDuration: 0
+    direction: 2
+  - pos: 13
+    holdDuration: 0
+    direction: 0
+  - pos: 14
+    holdDuration: 0
+    direction: 1
+  - pos: 14.5
+    holdDuration: 0
+    direction: 1
+  - pos: 15
+    holdDuration: 0
+    direction: 1
+  - pos: 16
+    holdDuration: 0
+    direction: 0
+  - pos: 17
+    holdDuration: 0
+    direction: 2
+  - pos: 18
+    holdDuration: 0
+    direction: 3
+  - pos: 19
+    holdDuration: 0
+    direction: 2
+  - pos: 20
+    holdDuration: 0
+    direction: 3
+  - pos: 21
+    holdDuration: 0
+    direction: 1
+  - pos: 22
+    holdDuration: 0
+    direction: 0
+  - pos: 22.5
+    holdDuration: 0
+    direction: 0
+  - pos: 23
+    holdDuration: 0
+    direction: 0
+  - pos: 24
+    holdDuration: 0
+    direction: 1
+  - pos: 25
+    holdDuration: 0
+    direction: 2
+  - pos: 25.5
+    holdDuration: 0
+    direction: 2
+  - pos: 26
+    holdDuration: 0
+    direction: 2
+  - pos: 27
+    holdDuration: 0
+    direction: 0
+  - pos: 28
+    holdDuration: 0
+    direction: 1
+  - pos: 29
+    holdDuration: 0
+    direction: 3
+  - pos: 29.5
+    holdDuration: 0
+    direction: 3
+  - pos: 30
+    holdDuration: 0
+    direction: 3
+  - pos: 31
+    holdDuration: 0
+    direction: 2
+  - pos: 32
+    holdDuration: 0
+    direction: 3
+  - pos: 33
+    holdDuration: 0
+    direction: 0
+  - pos: 33.5
+    holdDuration: 0
+    direction: 0
+  - pos: 34
+    holdDuration: 0
+    direction: 0
+  - pos: 35
+    holdDuration: 0
+    direction: 3
+  - pos: 36
+    holdDuration: 0
+    direction: 2
+  - pos: 37
+    holdDuration: 0
+    direction: 1
+  - pos: 37.5
+    holdDuration: 0
+    direction: 1
+  - pos: 38
+    holdDuration: 0
+    direction: 1
+  - pos: 39
+    holdDuration: 0
+    direction: 0
+  - pos: 40
+    holdDuration: 0
+    direction: 1
+  - pos: 41
+    holdDuration: 0
+    direction: 2
+  - pos: 42
+    holdDuration: 0
+    direction: 3
+  - pos: 43
+    holdDuration: 0
+    direction: 0
+  - pos: 43.5
+    holdDuration: 0
+    direction: 0
+  - pos: 44
+    holdDuration: 0
+    direction: 1
+  - pos: 44.5
+    holdDuration: 0
+    direction: 1
+  - pos: 45
+    holdDuration: 0
+    direction: 2
+  - pos: 46
+    holdDuration: 0
+    direction: 3
+  - pos: 47
+    holdDuration: 0
+    direction: 2
+  - pos: 48
+    holdDuration: 0
+    direction: 3
+  - pos: 49
+    holdDuration: 0
+    direction: 0
+  - pos: 50
+    holdDuration: 0
+    direction: 1
+  - pos: 51
+    holdDuration: 0
+    direction: 2
+  - pos: 51.5
+    holdDuration: 0
+    direction: 2
+  - pos: 52
+    holdDuration: 0
+    direction: 3
+  - pos: 52.5
+    holdDuration: 0
+    direction: 3
+  - pos: 53
+    holdDuration: 0
+    direction: 0
+  - pos: 54
+    holdDuration: 0
+    direction: 1
+  - pos: 55
+    holdDuration: 0
+    direction: 0
+  - pos: 56
+    holdDuration: 0
+    direction: 0
+  - pos: 57
+    holdDuration: 0
+    direction: 1
+  - pos: 58
+    holdDuration: 0
+    direction: 1
+  - pos: 59
+    holdDuration: 0
+    direction: 2
+  - pos: 59.5
+    holdDuration: 0
+    direction: 3
+  - pos: 60
+    holdDuration: 0
+    direction: 2
+  - pos: 60.5
+    holdDuration: 0
+    direction: 3
+  - pos: 61
+    holdDuration: 0
+    direction: 1
+  - pos: 62
+    holdDuration: 0
+    direction: 0
+  - pos: 63
+    holdDuration: 0
+    direction: 2
+  - pos: 64
+    holdDuration: 0
+    direction: 2
+  - pos: 65
+    holdDuration: 0
+    direction: 3
+  - pos: 66
+    holdDuration: 0
+    direction: 3
+  - pos: 67
+    holdDuration: 0
+    direction: 0
+  - pos: 67.5
+    holdDuration: 0
+    direction: 1
+  - pos: 68
+    holdDuration: 0
+    direction: 0
+  - pos: 68.5
+    holdDuration: 0
+    direction: 1
+  - pos: 69
+    holdDuration: 0
+    direction: 2
+  - pos: 70
+    holdDuration: 0
+    direction: 3
+  - pos: 71
+    holdDuration: 0
+    direction: 0
+  - pos: 71.5
+    holdDuration: 0
+    direction: 0
+  - pos: 72
+    holdDuration: 0
+    direction: 0
+  - pos: 73
+    holdDuration: 0
+    direction: 1
+  - pos: 73.5
+    holdDuration: 0
+    direction: 1
+  - pos: 74
+    holdDuration: 0
+    direction: 1
+  - pos: 75
+    holdDuration: 0
+    direction: 2
+  - pos: 75.5
+    holdDuration: 0
+    direction: 2
+  - pos: 76
+    holdDuration: 0
+    direction: 2
+  - pos: 77
+    holdDuration: 0
+    direction: 3
+  - pos: 77.5
+    holdDuration: 0
+    direction: 3
+  - pos: 78
+    holdDuration: 0
+    direction: 3
+  - pos: 79
+    holdDuration: 0
+    direction: 0
+  - pos: 80
+    holdDuration: 0
+    direction: 0
+  - pos: 81
+    holdDuration: 0
+    direction: 1
+  - pos: 82
+    holdDuration: 0
+    direction: 1
+  - pos: 83
+    holdDuration: 0
+    direction: 2
+  - pos: 83.5
+    holdDuration: 0
+    direction: 3
+  - pos: 84
+    holdDuration: 0
+    direction: 0
+  - pos: 85
+    holdDuration: 0
+    direction: 2
+  - pos: 85.5
+    holdDuration: 0
+    direction: 3
+  - pos: 86
+    holdDuration: 0
+    direction: 3
+  - pos: 87
+    holdDuration: 0
+    direction: 1
+  - pos: 87.5
+    holdDuration: 0
+    direction: 1
+  - pos: 88
+    holdDuration: 0
+    direction: 0
+  - pos: 89
+    holdDuration: 0
+    direction: 3
+  - pos: 89.5
+    holdDuration: 0
+    direction: 2
+  - pos: 90
+    holdDuration: 0
+    direction: 2
+  - pos: 91
+    holdDuration: 0
+    direction: 0
+  - pos: 91.5
+    holdDuration: 0
+    direction: 0
+  - pos: 92
+    holdDuration: 0
+    direction: 1
+  - pos: 93
+    holdDuration: 0
+    direction: 2
+  - pos: 94
+    holdDuration: 0
+    direction: 3
+  - pos: 95
+    holdDuration: 0
+    direction: 0
+  - pos: 96
+    holdDuration: 0
+    direction: 1
+  - pos: 97
+    holdDuration: 0
+    direction: 2
+  - pos: 98
+    holdDuration: 0
+    direction: 3
+  - pos: 99
+    holdDuration: 0
+    direction: 1
+  - pos: 100
+    holdDuration: 0
+    direction: 0
+  - pos: 101
+    holdDuration: 0
+    direction: 1
+  - pos: 103
+    holdDuration: 0
+    direction: 2
+  - pos: 104
+    holdDuration: 0
+    direction: 1
+  - pos: 105
+    holdDuration: 0
+    direction: 0
+  - pos: 106
+    holdDuration: 0
+    direction: 3
+  - pos: 107
+    holdDuration: 0
+    direction: 2
+  - pos: 107.5
+    holdDuration: 0
+    direction: 2
+  - pos: 108
+    holdDuration: 0
+    direction: 3
+  - pos: 108.5
+    holdDuration: 0
+    direction: 3
+  - pos: 109
+    holdDuration: 0
+    direction: 0
+  - pos: 110
+    holdDuration: 0
+    direction: 1
+  - pos: 111
+    holdDuration: 0
+    direction: 2
+  - pos: 112
+    holdDuration: 0
+    direction: 0
+  - pos: 113
+    holdDuration: 0
+    direction: 3
+  - pos: 114
+    holdDuration: 0
+    direction: 1
+  - pos: 115
+    holdDuration: 0
+    direction: 0
+  - pos: 115.5
+    holdDuration: 0
+    direction: 0
+  - pos: 116
+    holdDuration: 0
+    direction: 1
+  - pos: 116.5
+    holdDuration: 0
+    direction: 1
+  - pos: 117
+    holdDuration: 0
+    direction: 2
+  - pos: 118
+    holdDuration: 0
+    direction: 3
+  - pos: 119
+    holdDuration: 0
+    direction: 0
+  - pos: 120
+    holdDuration: 0
+    direction: 1
+  - pos: 121
+    holdDuration: 0
+    direction: 3
+  - pos: 122
+    holdDuration: 0
+    direction: 2
+  - pos: 123
+    holdDuration: 0
+    direction: 2
+  - pos: 123.5
+    holdDuration: 0
+    direction: 3
+  - pos: 124
+    holdDuration: 0
+    direction: 0
+  - pos: 124.5
+    holdDuration: 0
+    direction: 1
+  - pos: 125
+    holdDuration: 0
+    direction: 0
+  - pos: 126
+    holdDuration: 0
+    direction: 1
+  - pos: 127
+    holdDuration: 0
+    direction: 2
+  - pos: 128
+    holdDuration: 0
+    direction: 2
+  - pos: 129
+    holdDuration: 0
+    direction: 3
+  - pos: 130
+    holdDuration: 0
+    direction: 3
+  - pos: 131
+    holdDuration: 0
+    direction: 2
+  - pos: 131.5
+    holdDuration: 0
+    direction: 2
+  - pos: 132
+    holdDuration: 0
+    direction: 3
+  - pos: 132.5
+    holdDuration: 0
+    direction: 0
+  - pos: 133
+    holdDuration: 0
+    direction: 1
+  - pos: 134
+    holdDuration: 0
+    direction: 0

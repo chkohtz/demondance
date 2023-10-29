@@ -6,6 +6,10 @@ public class ParanoiaController : MonoBehaviour
 {
     public float maxVal = 100;
     public ParanoiaBar paranoiaBar;
+    public GameOverController gameOverController;
+
+    [SerializeField]
+    public Crowd crowd;
 
     public float currentVal
     {
@@ -28,5 +32,13 @@ public class ParanoiaController : MonoBehaviour
     public void incrementValue(float change)
     {
         currentVal += change;
+        if(_currentVal >= maxVal)
+        {
+            gameOverController.OnGameOver();
+        };
+        if (currentVal <= 0)
+        {
+            crowd.Cheer();
+        }
     }
 }

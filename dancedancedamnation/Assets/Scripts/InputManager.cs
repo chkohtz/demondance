@@ -8,6 +8,9 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     public GameObject bar;
 
+    [SerializeField]
+    public PlayerAnimator playerAnim;
+
     public LayerMask m_LayerMask;
 
     private Collider2D[] hitColliders;
@@ -25,12 +28,28 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     ScoreController score;
 
-    private AudioSource inputSound;
+    [SerializeField]
+    ParanoiaController paranoia;
+
+    [SerializeField]
+    public AudioSource arrowSoundL;
+
+    [SerializeField]
+    public AudioSource arrowSoundR;
+
+    [SerializeField]
+    public AudioSource arrowSoundU;
+    
+    [SerializeField]
+    public AudioSource arrowSoundD;
+    
+    [SerializeField]
+    public AudioSource missSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        inputSound = GetComponent<AudioSource>();
+        //arrowSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,24 +60,27 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             directionInput(Direction.Left);
+            arrowSoundL.Play();
         }
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             directionInput(Direction.Right);
+            arrowSoundR.Play();
         }
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             directionInput(Direction.Up);
+            arrowSoundU.Play();
         }
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             directionInput(Direction.Down);
+            arrowSoundD.Play();
         }
     }
 
     void directionInput(Direction dir)
     {
-        inputSound.Play();
         hitColliders = Physics2D.OverlapBoxAll(bar.transform.position, bar.transform.localScale, 0, m_LayerMask);
         Debug.Log(hitColliders.Length);
         if (hitColliders.Length > 0)

@@ -21,16 +21,20 @@ public class DialogueManager : MonoBehaviour
     public GameObject nameBox;
     public GameObject textBox;
     public Image portrait;
+
     public List<Conversation> conversations;
     public Conversation activeConvo;
 
     public bool canAdvance;
     int index = 0;
 
+    public AudioSource audio;
+    public AudioClip clip;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartDialogue();
+        StartDialogue(0);
     }
 
     // Update is called once per frame
@@ -38,7 +42,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && canAdvance)
         {
-
             index++;
             if (index >= activeConvo.lines.Count)
             {
@@ -50,9 +53,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+    void StartDialogue(int convoIndex)
     {
         index = 0;
+        activeConvo = conversations[convoIndex];
         NextLine();
     }
 
@@ -69,13 +73,18 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in dialogue.line.ToCharArray())
         {
             boxText.text += c;
-            yield return new WaitForSeconds(.025f);
+            if(c != ' ' && c!= '\n')
+            {
+                audio.PlayOneShot(clip);
+            }
+            yield return new WaitForSeconds(.03f);
         }
         canAdvance = true;
     }
 
     void EndDialogue()
     {
+        canAdvance = false;
         nameBox.SetActive(false);
         textBox.SetActive(false);
         portrait.enabled = false;
