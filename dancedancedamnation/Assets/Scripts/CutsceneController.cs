@@ -71,14 +71,6 @@ public class CutsceneController : MonoBehaviour
     }
 }
 
-[CreateAssetMenu(fileName = "CutsceneData", menuName = "Cutscene", order = 2)]
-[System.Serializable]
-public class Cutscene : ScriptableObject
-{
-    public List<CutsceneStep> steps;
-}
-
-
 [System.Serializable]
 public class CutsceneStep 
 {

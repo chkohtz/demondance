@@ -1396,6 +1396,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 266.1113
       objectReference: {fileID: 0}
+    - target: {fileID: 5665957262854638507, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: activeConvo
+      value: 
+      objectReference: {fileID: 11400000, guid: 42287efb3d90af14b8951c45a7efa343, type: 2}
+    - target: {fileID: 5665957262854638507, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: conversations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5665957262854638507, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: conversations.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 42287efb3d90af14b8951c45a7efa343, type: 2}
+    - target: {fileID: 5665957262854638507, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: conversations.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2cfbbde4647da01439532bb67797a011, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
