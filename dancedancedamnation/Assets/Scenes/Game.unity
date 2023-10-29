@@ -1023,7 +1023,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 166b6d1bad22a4c9faa5aa59360b11f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7bf5baf8326a4e841bcc570d6f908104, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1126,11 +1126,11 @@ MonoBehaviour:
   secPerBeat: 0
   dsptimesong: 0
   beatsShownInAdvance: 0
+  beatmap: {fileID: 11400000, guid: 7c30d197d49d97e43a646c9a9d64716b, type: 2}
   shiftAmount: 0
   spacing: 0
-  beatmap: {fileID: 11400000, guid: b3508e95feb582145b811ce91ff8aacd, type: 2}
+  song: {fileID: 11400000, guid: 085b12ec1fac9fc4db5e1b27f32f442d, type: 2}
   audioSource: {fileID: 330697850}
-  song: {fileID: 11400000, guid: 1ff54185c2f213b41b8f2814ad9f58b0, type: 2}
   notePrefab: {fileID: 6380820595609815455, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
   spawnPos: {fileID: 1172766969}
   endPos: {fileID: 1680612073}
