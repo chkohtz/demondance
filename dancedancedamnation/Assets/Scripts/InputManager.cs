@@ -36,6 +36,9 @@ public class InputManager : MonoBehaviour
     
     [SerializeField]
     public AudioSource arrowSoundD;
+    
+    [SerializeField]
+    public AudioSource missSound;
 
     // Start is called before the first frame update
     void Start()
@@ -91,6 +94,7 @@ public class InputManager : MonoBehaviour
             score.UpdateScore(Accuracy.Miss, 0);
             accuracyAnim.SetTrigger("Set");
             breakCombo();
+            missSound.Play();
         }
     }
 

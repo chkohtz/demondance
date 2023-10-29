@@ -1293,6 +1293,7 @@ MonoBehaviour:
   arrowSoundR: {fileID: 1287387268}
   arrowSoundU: {fileID: 101194905}
   arrowSoundD: {fileID: 1521485542}
+  missSound: {fileID: 0}
 --- !u!4 &1105745657
 Transform:
   m_ObjectHideFlags: 0
