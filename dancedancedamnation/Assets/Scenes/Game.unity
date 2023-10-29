@@ -1125,7 +1125,7 @@ MonoBehaviour:
   songPosInBeats: 0
   secPerBeat: 0
   dsptimesong: 0
-  beatsShownInAdvance: 0
+  beatsShownInAdvance: 2.5
   beatmap: {fileID: 11400000, guid: 7c30d197d49d97e43a646c9a9d64716b, type: 2}
   shiftAmount: 0
   spacing: 0
@@ -2950,7 +2950,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 54326d4656172ee45b93b6c827a783f3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

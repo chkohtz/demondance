@@ -13,6 +13,8 @@ public class InputManager : MonoBehaviour
     public GameObject left;
     public GameObject right;
 
+
+    public Animator 
     [SerializeField]
     public PlayerAnimator playerAnim;
 
@@ -106,9 +108,6 @@ public class InputManager : MonoBehaviour
             case Direction.Right:
                 hitColliders = Physics2D.OverlapBoxAll(right.transform.position, right.transform.localScale, 0, m_LayerMask);
                 break;
-
-            
-
         }
         if (hitColliders.Length > 0)
         {
