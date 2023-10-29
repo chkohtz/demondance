@@ -106,6 +106,7 @@ MonoBehaviour:
   SpawnPos: {x: 0, y: 0}
   RemovePos: {x: 0, y: 0}
   BeatsShownInAdvance: 0
+  fadeclip: {fileID: 7400000, guid: 52b1e244d9d2a564c8f3e1a5bbffbc11, type: 2}
   moveTime: 100
   curve:
     serializedVersion: 2

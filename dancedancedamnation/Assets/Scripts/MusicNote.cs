@@ -14,6 +14,8 @@ public class MusicNote : MonoBehaviour
     private float beatOfThisNote;
     private AudioSource arrowSound;
 
+    public AnimationClip fadeclip;
+
     public float moveTime = 10;
     private float elapsedTime = 0;
 
@@ -91,7 +93,7 @@ public class MusicNote : MonoBehaviour
     {
         isDead = true;
         animator.SetBool("isDead", true);
-        Destroy(gameObject, 1);
+        Destroy(gameObject, fadeclip.length);
     }
 
     // Update is called once per frame
