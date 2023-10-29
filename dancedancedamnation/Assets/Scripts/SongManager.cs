@@ -38,14 +38,13 @@ public class SongManager : MonoBehaviour
     void Update()
     {
         //debug spawn arrows
-        if(Input.GetKeyDown(KeyCode.J))
-        {
-            MusicNote testNote = Instantiate(notePrefab).GetComponent<MusicNote>();
-            testNote.note.direction = Direction.Left;           
-            testNote.SpawnPos = spawnPos.transform.position;
-            testNote.RemovePos= endPos.transform.position;
-
-        }
+        //if(Input.GetKeyDown(KeyCode.J))
+        //{
+        //    MusicNote testNote = Instantiate(notePrefab).GetComponent<MusicNote>();
+        //    testNote.note.direction = Direction.Left;           
+        //    testNote.SpawnPos = spawnPos.transform.position;
+        //    testNote.RemovePos= endPos.transform.position;
+        //}
 
         songPosition = (float)(AudioSettings.dspTime - dsptimesong);
         songPosInBeats = songPosition / secPerBeat;

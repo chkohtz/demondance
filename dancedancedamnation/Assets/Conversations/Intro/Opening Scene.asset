@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Conversation
   lines:
   - portrait: {fileID: 0}
-    name: 
-    line: 
+    name: ???
+    line: come on this sewer thing can't be that heavy
   - portrait: {fileID: 0}
-    name: 
-    line: 
+    name: ???
+    line: oh hey there we go

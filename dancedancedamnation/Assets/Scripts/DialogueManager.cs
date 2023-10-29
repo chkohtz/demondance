@@ -31,10 +31,12 @@ public class DialogueManager : MonoBehaviour
     public AudioSource audio;
     public AudioClip clip;
 
+    public bool autoStart = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartDialogue(0);
+        if(autoStart) StartDialogue(0);
     }
 
     // Update is called once per frame
@@ -53,10 +55,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void StartDialogue(int convoIndex)
+    public void StartDialogue(int convoIndex)
     {
+        SetState(true);
         index = 0;
         activeConvo = conversations[convoIndex];
+        NextLine();
+    }
+
+    public void StartConversation(Conversation conversation)
+    {
+        SetState(true);
+        index = 0;
+        activeConvo = conversation;
         NextLine();
     }
 
@@ -73,7 +84,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in dialogue.line.ToCharArray())
         {
             boxText.text += c;
-            if(c != ' ' && c!= '\n')
+            if(clip && c != ' ' && c!= '\n')
             {
                 audio.PlayOneShot(clip);
             }
@@ -82,11 +93,18 @@ public class DialogueManager : MonoBehaviour
         canAdvance = true;
     }
 
+    public void SetState(bool state)
+    {
+        nameBox.SetActive(state);
+        textBox.SetActive(state);
+        portrait.enabled = state;
+    }
+
     void EndDialogue()
     {
         canAdvance = false;
-        nameBox.SetActive(false);
-        textBox.SetActive(false);
-        portrait.enabled = false;
+        SetState(false);
+
+        gameObject.SendMessageUpwards("OnDialogueFinish");
     }
 }
