@@ -46,6 +46,9 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     public AudioSource missSound;
 
+    private bool needLeft, needRight, needUp, needDown;
+    private bool presssedLeft, pressedRight, pressedUp, pressedDown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,39 +58,66 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        comboText.text = combo.ToString();        
+        comboText.text = combo.ToString();
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.anyKey)
         {
-            directionInput(Direction.Left);
-            arrowSoundL.Play();
-        }
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            directionInput(Direction.Right);
-            arrowSoundR.Play();
-        }
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            directionInput(Direction.Up);
-            arrowSoundU.Play();
-        }
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            directionInput(Direction.Down);
-            arrowSoundD.Play();
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                directionInput(Direction.Left);
+                arrowSoundL.Play();
+            }
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                directionInput(Direction.Right);
+                arrowSoundR.Play();
+            }
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                directionInput(Direction.Up);
+                arrowSoundU.Play();
+            }
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                directionInput(Direction.Down);
+                arrowSoundD.Play();
+            }
         }
     }
 
     void directionInput(Direction dir)
     {
         hitColliders = Physics2D.OverlapBoxAll(bar.transform.position, bar.transform.localScale, 0, m_LayerMask);
-        Debug.Log(hitColliders.Length);
         if (hitColliders.Length > 0)
         {
             foreach (Collider2D collider in hitColliders)
             {
-                Accuracy accuracy = collider.gameObject.GetComponent<MusicNote>().registerInput(dir);
+                needLeft = false;
+                needRight = false;
+                needUp = false;
+                needDown = false;
+
+                MusicNote musicNote = collider.gameObject.GetComponent<MusicNote>();
+                switch (musicNote.note.direction)
+                {
+                    case Direction.Up:
+                        needUp = true;
+                        break;
+                    case Direction.Down:
+                        needDown = true;
+                        break;
+                    case Direction.Left:
+                        needLeft = true;
+                        break;
+                    case Direction.Right:
+                        needRight = true;
+                        break;
+                }
+            }
+            foreach (Collider2D collider in hitColliders)
+            {
+                MusicNote musicNote = collider.gameObject.GetComponent<MusicNote>();
+                Accuracy accuracy = musicNote.registerInput(dir);
                 Destroy(collider.gameObject); // Change to cool animation later
                 accuracyText.Set(accuracy);
                 accuracyAnim.SetTrigger("Set");
@@ -96,7 +126,7 @@ public class InputManager : MonoBehaviour
         }
         else
         {
-            Miss();
+            //Miss();
         }
     }
 
