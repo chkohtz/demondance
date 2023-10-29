@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: loseConvo
   m_EditorClassIdentifier: Assembly-CSharp::Conversation
-  lines: []
+  lines:
+  - portrait: {fileID: 0}
+    name: ???
+    line: "Your identity was revealed\u2026"
