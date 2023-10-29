@@ -147,7 +147,7 @@ public class InputManager : MonoBehaviour
             {
                 MusicNote musicNote = collider.gameObject.GetComponent<MusicNote>();
                 Accuracy accuracy = musicNote.registerInput(dir);
-                if(accuracy == Accuracy.Perfect)
+                if(accuracy == Accuracy.Perfect || accuracy == Accuracy.Great)
                 {
                     Perfect(musicNote);
                 }
