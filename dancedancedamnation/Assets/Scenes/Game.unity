@@ -721,9 +721,9 @@ MonoBehaviour:
   songPosInBeats: 0
   secPerBeat: 0
   dsptimesong: 0
-  beatsShownInAdvance: 3
+  beatsShownInAdvance: 0
   audioSource: {fileID: 330697850}
-  song: {fileID: 11400000, guid: c03aedda8c0064a458bcbdb46275e3e5, type: 2}
+  song: {fileID: 11400000, guid: 1ff54185c2f213b41b8f2814ad9f58b0, type: 2}
   notePrefab: {fileID: 6380820595609815455, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
   spawnPos: {fileID: 1172766969}
   endPos: {fileID: 1680612073}
@@ -970,6 +970,10 @@ PrefabInstance:
       propertyPath: crowd
       value: 
       objectReference: {fileID: 1178468702}
+    - target: {fileID: 2963724534629608654, guid: e727373d701ace74d8ad30709e3726fa, type: 3}
+      propertyPath: gameOverController
+      value: 
+      objectReference: {fileID: 2075749631}
     - target: {fileID: 4228901737554925086, guid: e727373d701ace74d8ad30709e3726fa, type: 3}
       propertyPath: m_Name
       value: ParanoiaBar
@@ -2323,6 +2327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 77999904}
+  playerAnim: {fileID: 0}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -2330,11 +2335,12 @@ MonoBehaviour:
   accuracyAnim: {fileID: 1275738978}
   accuracyText: {fileID: 1275738977}
   score: {fileID: 641959486}
+  paranoia: {fileID: 0}
   arrowSoundL: {fileID: 58064108}
   arrowSoundR: {fileID: 156952285}
   arrowSoundU: {fileID: 14567219}
   arrowSoundD: {fileID: 465284803}
-  missSound: {fileID: 619407965}
+  missSound: {fileID: 0}
 --- !u!4 &1459896518
 Transform:
   m_ObjectHideFlags: 0
@@ -2780,6 +2786,50 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2075749630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2075749632}
+  - component: {fileID: 2075749631}
+  m_Layer: 0
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2075749631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075749630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c023853f78aecc641966d1e7ee701815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2075749632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075749630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.155492, y: -3.520477, z: -0.03201066}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2799,3 +2849,4 @@ SceneRoots:
   - {fileID: 156952286}
   - {fileID: 58064109}
   - {fileID: 14567220}
+  - {fileID: 2075749632}
