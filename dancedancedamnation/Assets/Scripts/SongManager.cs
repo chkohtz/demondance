@@ -80,7 +80,7 @@ public class SongManager : MonoBehaviour
             nextIndex++;
         }
 
-        if(songPosition > audioSource.clip.length)
+        if (songPosition > audioSource.clip.length)
         {
             WinGame();
         }

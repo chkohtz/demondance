@@ -13,8 +13,13 @@ public class InputManager : MonoBehaviour
     public GameObject left;
     public GameObject right;
 
+    public Animator upAnim;
+    public Animator downAnim;
+    public Animator leftAnim;
+    public Animator rightAnim;
 
-    
+
+
     [SerializeField]
     public PlayerAnimator playerAnim;
 
@@ -139,6 +144,10 @@ public class InputManager : MonoBehaviour
             {
                 MusicNote musicNote = collider.gameObject.GetComponent<MusicNote>();
                 Accuracy accuracy = musicNote.registerInput(dir);
+                if(accuracy == Accuracy.Perfect)
+                {
+                    Perfect(musicNote);
+                }
                 Destroy(collider.gameObject); // Change to cool animation later
                 accuracyText.Set(accuracy);
                 accuracyAnim.SetTrigger("Set");
@@ -159,6 +168,27 @@ public class InputManager : MonoBehaviour
         accuracyAnim.SetTrigger("Set");
         playerAnim.player.SetTrigger("Hurt");
         breakCombo();
+    }
+
+    public void Perfect(MusicNote mn)
+    {
+        switch (mn.note.direction)
+        {
+            case Direction.Left:
+                leftAnim.SetTrigger("Perfect");
+                break;
+            case Direction.Down:
+                downAnim.SetTrigger("Perfect");
+                break;
+            case Direction.Up:
+                upAnim.SetTrigger("Perfect");
+                break;
+            case Direction.Right:
+                rightAnim.SetTrigger("Perfect");
+                break;
+            default:
+                break;
+        }
     }
 
     void OnDrawGizmos()

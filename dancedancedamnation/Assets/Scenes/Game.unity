@@ -1126,10 +1126,10 @@ MonoBehaviour:
   secPerBeat: 0
   dsptimesong: 0
   beatsShownInAdvance: 2.5
-  beatmap: {fileID: 11400000, guid: 7c30d197d49d97e43a646c9a9d64716b, type: 2}
+  beatmap: {fileID: 11400000, guid: b3508e95feb582145b811ce91ff8aacd, type: 2}
   shiftAmount: 0
   spacing: 0
-  song: {fileID: 11400000, guid: 085b12ec1fac9fc4db5e1b27f32f442d, type: 2}
+  song: {fileID: 11400000, guid: 1ff54185c2f213b41b8f2814ad9f58b0, type: 2}
   audioSource: {fileID: 330697850}
   notePrefab: {fileID: 6380820595609815455, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
   spawnPos: {fileID: 1172766969}
@@ -1743,6 +1743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572714222}
   - component: {fileID: 572714223}
+  - component: {fileID: 572714224}
   m_Layer: 0
   m_Name: GhostNoteUp
   m_TagString: Untagged
@@ -1817,6 +1818,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &572714224
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572714221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &619407964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,6 +3677,10 @@ MonoBehaviour:
   down: {fileID: 1193424244}
   left: {fileID: 1879781914}
   right: {fileID: 1947931678}
+  upAnim: {fileID: 572714224}
+  downAnim: {fileID: 1193424247}
+  leftAnim: {fileID: 1879781917}
+  rightAnim: {fileID: 1947931681}
   playerAnim: {fileID: 1267234733}
   m_LayerMask:
     serializedVersion: 2
@@ -4156,6 +4182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1879781915}
   - component: {fileID: 1879781916}
+  - component: {fileID: 1879781917}
   m_Layer: 0
   m_Name: GhostNoteLeft
   m_TagString: Untagged
@@ -4230,6 +4257,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1879781917
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879781914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1888733618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947931679}
   - component: {fileID: 1947931680}
+  - component: {fileID: 1947931681}
   m_Layer: 0
   m_Name: GhostNoteRight
   m_TagString: Untagged
@@ -4396,6 +4445,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1947931681
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947931678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1961823518
 GameObject:
   m_ObjectHideFlags: 0
