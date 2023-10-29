@@ -7,16 +7,19 @@ using UnityEngine;
 
 public class SongManager : MonoBehaviour
 {
-
+    [Header("Song Info")]
     public float songPosition;
     public float songPosInBeats;
     public float secPerBeat;
     public float dsptimesong;
     public float beatsShownInAdvance;
 
-
+    [Header("Edit Song")]
     public float shiftAmount;
     public float spacing;
+    public Beatmap beatmap;
+
+    [Header("Other")]
 
     [SerializeField]
     AudioSource audioSource;
@@ -103,6 +106,14 @@ public class SongManager : MonoBehaviour
         {
             note.pos *= spacing;
         }
+    }
+
+    [ContextMenu("Convert Song (old) to Beatmap")]
+    public void convert()
+    {
+        beatmap.bpm = song.bpm;
+        beatmap.audioClip = song.audioClip;
+        beatmap.notes = song.notes;
     }
 }
 
