@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
     public GameObject right;
 
 
-    public Animator 
+    
     [SerializeField]
     public PlayerAnimator playerAnim;
 
