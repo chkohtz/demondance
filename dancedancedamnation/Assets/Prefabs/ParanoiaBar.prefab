@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -16, y: -159.8969}
-  m_SizeDelta: {x: 20.7136, y: -10.144}
+  m_AnchoredPosition: {x: -28.410583, y: -153.13342}
+  m_SizeDelta: {x: 42.952, y: -58.5376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2305836539957164631
 CanvasRenderer:
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8973636, b: 0, a: 1}
+  m_Color: {r: 0.4433962, g: 0.08156818, b: 0.22568917, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -102,15 +102,15 @@ RectTransform:
   m_GameObject: {fileID: 3369053916825869986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2221124413728435300}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 64, y: 320}
+  m_AnchoredPosition: {x: 1.0440998, y: -0.88490295}
+  m_SizeDelta: {x: 2020.8826, y: 3651.2737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7695170597618946390
 CanvasRenderer:
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2fdfb3031db02ff41b3f4cf93fe4ba2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ccf11ef516400dc43b197458fb111c3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -167,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &64412104158632441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.836
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f56c75ac43cfe4c980470ea2cbb628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVal: 0
   maxVal: 100
   paranoiaBar: {fileID: 3234358900417462716}
+  gameOverController: {fileID: 0}
+  crowd: {fileID: 0}

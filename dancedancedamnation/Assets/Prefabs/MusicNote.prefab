@@ -130,10 +130,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  upArrow: {fileID: -1960926169, guid: f5d43a14ee6fe8b4082883ddf293e737, type: 3}
-  downArrow: {fileID: -222018101, guid: f5d43a14ee6fe8b4082883ddf293e737, type: 3}
-  leftArrow: {fileID: -1955778541, guid: f5d43a14ee6fe8b4082883ddf293e737, type: 3}
-  rightArrow: {fileID: 960842110, guid: f5d43a14ee6fe8b4082883ddf293e737, type: 3}
+  upArrow: {fileID: 21300000, guid: f95fd513ecea4b143a8621455b576f36, type: 3}
+  downArrow: {fileID: 21300000, guid: 54326d4656172ee45b93b6c827a783f3, type: 3}
+  leftArrow: {fileID: 21300000, guid: b3596f0d435e4cb4b9362349c84eb201, type: 3}
+  rightArrow: {fileID: 21300000, guid: 1648a5db5a52db84088c58c452bd4946, type: 3}
 --- !u!61 &-9034947461411750200
 BoxCollider2D:
   m_ObjectHideFlags: 0

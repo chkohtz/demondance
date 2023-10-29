@@ -962,10 +962,11 @@ MonoBehaviour:
   secPerBeat: 0
   dsptimesong: 0
   beatsShownInAdvance: 0
+  beatmap: {fileID: 0}
   shiftAmount: 1.5
   spacing: 1
-  audioSource: {fileID: 330697850}
   song: {fileID: 11400000, guid: 085b12ec1fac9fc4db5e1b27f32f442d, type: 2}
+  audioSource: {fileID: 330697850}
   notePrefab: {fileID: 6380820595609815455, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
   spawnPos: {fileID: 1172766969}
   endPos: {fileID: 1680612073}
@@ -2996,6 +2997,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1651424386}
     m_Modifications:
+    - target: {fileID: 3354350840533248453, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
+      propertyPath: upArrow
+      value: 
+      objectReference: {fileID: 21300000, guid: f95fd513ecea4b143a8621455b576f36, type: 3}
+    - target: {fileID: 3354350840533248453, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
+      propertyPath: downArrow
+      value: 
+      objectReference: {fileID: 21300000, guid: 54326d4656172ee45b93b6c827a783f3, type: 3}
+    - target: {fileID: 3354350840533248453, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
+      propertyPath: leftArrow
+      value: 
+      objectReference: {fileID: 21300000, guid: b3596f0d435e4cb4b9362349c84eb201, type: 3}
+    - target: {fileID: 3354350840533248453, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
+      propertyPath: rightArrow
+      value: 
+      objectReference: {fileID: 21300000, guid: 1648a5db5a52db84088c58c452bd4946, type: 3}
     - target: {fileID: 6380820595609815455, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
       propertyPath: m_Name
       value: MusicNote
@@ -3188,6 +3205,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 77999904}
+  up: {fileID: 0}
+  down: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
   playerAnim: {fileID: 1267234733}
   m_LayerMask:
     serializedVersion: 2
