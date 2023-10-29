@@ -13,9 +13,33 @@ MonoBehaviour:
   m_Name: OpeningCutscene
   m_EditorClassIdentifier: 
   steps:
-  - type: 0
+  - type: 1
     dialogue: {fileID: 0}
-    image: {fileID: 0}
-    waitTime: 0
+    clip: {fileID: 7400000, guid: 8c673e44caac1cc4bbb69c59f53821f3, type: 2}
+    audioSource: {fileID: 0}
     screenShake: 0
+  - type: 0
+    dialogue: {fileID: 11400000, guid: 8f6d3cf7b93befe40a0bd73ab9683af0, type: 2}
     clip: {fileID: 0}
+    audioSource: {fileID: 0}
+    screenShake: 0
+  - type: 0
+    dialogue: {fileID: 11400000, guid: 6a3e59be0604a5244ba23249dc40485e, type: 2}
+    clip: {fileID: 7400000, guid: a28402792bd7ed74b9d574120a468b2c, type: 2}
+    audioSource: {fileID: 0}
+    screenShake: 0
+  - type: 1
+    dialogue: {fileID: 0}
+    clip: {fileID: 7400000, guid: 5fd6d0858934d17499b9e7bbd5f8cad7, type: 2}
+    audioSource: {fileID: 0}
+    screenShake: 0
+  - type: 1
+    dialogue: {fileID: 0}
+    clip: {fileID: 7400000, guid: c1439529e20609042ba2b5d3909b1f2a, type: 2}
+    audioSource: {fileID: 0}
+    screenShake: 0
+  - type: 0
+    dialogue: {fileID: 11400000, guid: 42287efb3d90af14b8951c45a7efa343, type: 2}
+    clip: {fileID: 7400000, guid: 9322178dd2a676d4fb44e3e3cd5f45f9, type: 2}
+    audioSource: {fileID: 0}
+    screenShake: 0

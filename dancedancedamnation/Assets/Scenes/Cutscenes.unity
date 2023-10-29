@@ -393,8 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb714ec8c7ab1148a791ddb839059be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutscene: {fileID: 11400000, guid: d414e17673f7bae47bfdb3c60f3e8c17, type: 2}
-  images: []
+  cutscene: {fileID: 11400000, guid: 637b8e76dfe74ce4da04215385802224, type: 2}
   dialogueManager: {fileID: 291901118}
   bgImage: {fileID: 335750255}
 --- !u!4 &444068775
@@ -1354,6 +1353,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1630161957060281457, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248203098437473068, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: m_Color.a
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394246185379801169, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2418590550820936358, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -1365,6 +1376,14 @@ PrefabInstance:
     - target: {fileID: 2418590550820936358, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
       propertyPath: m_OverridePixelPerfect
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588061737431727585, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588061737431727585, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4760873454837382484, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
       propertyPath: m_Pivot.x
@@ -1434,6 +1453,14 @@ PrefabInstance:
       propertyPath: conversations.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 2cfbbde4647da01439532bb67797a011, type: 2}
+    - target: {fileID: 5678581923026191930, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7835145656569943218, guid: 6fc0f61ee9ef7ff4b804eb5cacbe4393, type: 3}
+      propertyPath: m_Color.a
+      value: 0.101960786
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

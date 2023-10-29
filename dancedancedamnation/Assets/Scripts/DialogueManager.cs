@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     public Conversation activeConvo;
 
     public bool canAdvance;
+    public bool isFinished;
     int index = 0;
 
     public AudioSource audio;
@@ -36,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isFinished = true;
         if(autoStart) StartDialogue(0);
     }
 
@@ -47,6 +49,7 @@ public class DialogueManager : MonoBehaviour
             index++;
             if (index >= activeConvo.lines.Count)
             {
+                isFinished=true;
                 EndDialogue();
                 return;
             }
@@ -57,6 +60,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(int convoIndex)
     {
+        isFinished = false;
         SetState(true);
         index = 0;
         activeConvo = conversations[convoIndex];
@@ -65,6 +69,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(Conversation conversation)
     {
+        isFinished = false;
         SetState(true);
         index = 0;
         activeConvo = conversation;

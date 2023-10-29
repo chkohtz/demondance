@@ -8,8 +8,6 @@ public class CutsceneController : MonoBehaviour
 {
     [SerializeField]
     public Cutscene cutscene;
-    [SerializeField]
-    public Image[] images;
     private Image currentImage;
     [SerializeField]
     public DialogueManager dialogueManager;
@@ -35,9 +33,8 @@ public class CutsceneController : MonoBehaviour
     private void Update()
     {
         if (paused) return;
-        waitTime -= Time.deltaTime;
 
-        if(waitTime <= 0)
+        if(Input.GetKeyDown(KeyCode.Space) && dialogueManager.isFinished && stepIndex <= cutscene.steps.Count)
         {
             AdvanceStep();
         }
@@ -45,33 +42,39 @@ public class CutsceneController : MonoBehaviour
 
     void AdvanceStep()
     {
+        Debug.Log("advance step: " + stepIndex);
+
         paused = false;
         if (stepIndex >= cutscene.steps.Count)
         {
             //TODO: end cutscene
+            Debug.Log("OwO");
             return;
         }
         CutsceneStep step = cutscene.steps[stepIndex];
-        step.audioSource.Play();
+
+        stepIndex++;
+
+        if (step.audioSource != null)
+            step.audioSource.Play();
 
         switch (step.type) {
             case StepType.Dialog:
                 paused = true;
                 dialogueManager.StartConversation(step.dialogue);
+                if(step.clip != null)
+                    bgImage.GetComponent<Animator>().Play(step.clip.name);
                 break;
             case StepType.ImageChange:
-                bgImage.sprite = step.image;
+                dialogueManager.isFinished = true;
                 bgImage.GetComponent<Animator>().Play(step.clip.name);
-                break;
-            case StepType.Wait:
-                waitTime = step.waitTime;
                 break;
             case StepType.Input:
                 // input = 
                 break;
         }
 
-        stepIndex++;
+        
     }
 
     public void OnDialogueFinish()
@@ -86,18 +89,15 @@ public class CutsceneStep
     public StepType type;
 #nullable enable
     public Conversation? dialogue;
-    public Sprite? image;
 #nullable disable
-    public double waitTime;
-    public bool screenShake;
-    public AnimationClip clip;
+    public AnimationClip? clip;
     public AudioSource audioSource;
+    public bool screenShake;
 }
 
 public enum StepType
 {
     Dialog,
     ImageChange,
-    Wait,
     Input,
 }
