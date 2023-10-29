@@ -13,18 +13,19 @@ public class SongManager : MonoBehaviour
     public float secPerBeat;
     public float dsptimesong;
     public float beatsShownInAdvance;
+    public Beatmap beatmap;
 
     [Header("Edit Song")]
     public float shiftAmount;
     public float spacing;
-    public Beatmap beatmap;
+    public Song song;
 
     [Header("Other")]
 
     [SerializeField]
     AudioSource audioSource;
 
-    public Song song;
+    
     int nextIndex = 0;
 
     public GameObject notePrefab;
@@ -40,7 +41,7 @@ public class SongManager : MonoBehaviour
     {
         songPosition = 0;
         songPosInBeats = 0;
-        secPerBeat = 60f / song.bpm;
+        secPerBeat = 60f / beatmap.bpm;
         dsptimesong = (float)AudioSettings.dspTime;
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
@@ -64,13 +65,13 @@ public class SongManager : MonoBehaviour
         songPosition = (float)(AudioSettings.dspTime - dsptimesong);
         songPosInBeats = songPosition / secPerBeat;
 
-        if (nextIndex < song.notes.Length && song.notes[nextIndex].pos < songPosInBeats + beatsShownInAdvance)
+        if (nextIndex < beatmap.notes.Length && beatmap.notes[nextIndex].pos < songPosInBeats + beatsShownInAdvance)
         {
             MusicNote spawnedNote = Instantiate(notePrefab).GetComponent<MusicNote>();
-            spawnedNote.note = song.notes[nextIndex];
+            spawnedNote.note = beatmap.notes[nextIndex];
             spawnedNote.BeatsShownInAdvance = beatsShownInAdvance;
             spawnedNote.SpawnPos = spawnPos.transform.position;
-            spawnedNote.RemovePos= endPos.transform.position;
+            spawnedNote.RemovePos = endPos.transform.position;
 
             //activeNotes.Enqueue(spawnedNote);
             //initialize the fields of the music note
@@ -90,22 +91,24 @@ public class SongManager : MonoBehaviour
         UnityEngine.Debug.Log("You win!!!");
     }
 
-    [ContextMenu("Shift Notes")]
+    [ContextMenu("Shift Notes (Beatmap)")]
     public void shiftNotes()
     {
-        foreach (Note note in song.notes)
+        foreach (Note note in beatmap.notes)
         {
             note.pos += shiftAmount;
         }
+        Debug.Log("Beatmap shifted by " + shiftAmount);
     }
 
-    [ContextMenu("Space Notes")]
+    [ContextMenu("Space Notes (Beatmap)")]
     public void spaceNotes()
     {
-        foreach (Note note in song.notes)
+        foreach (Note note in beatmap.notes)
         {
             note.pos *= spacing;
         }
+        Debug.Log("Beatmap spaced out by a factor of" + shiftAmount);
     }
 
     [ContextMenu("Convert Song (old) to Beatmap")]
@@ -114,6 +117,7 @@ public class SongManager : MonoBehaviour
         beatmap.bpm = song.bpm;
         beatmap.audioClip = song.audioClip;
         beatmap.notes = song.notes;
+        Debug.Log("Song " + song.name + " successfully copied into Beatmap " + beatmap.name);
     }
 }
 
