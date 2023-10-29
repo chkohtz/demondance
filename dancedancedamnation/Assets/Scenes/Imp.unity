@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 162887087}
   - component: {fileID: 162887086}
   m_Layer: 0
-  m_Name: Satan
+  m_Name: Imp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -783,7 +783,7 @@ Animator:
   m_GameObject: {fileID: 162887085}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2ec487499a68fd34b82164881682a3a9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 655ed1f5f28c50545a47d8156298ced7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -835,7 +835,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba97345b6df89c742bcc48cc25e4e791, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f5a0f75096f2954087d54fc149167db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -855,8 +855,8 @@ Transform:
   m_GameObject: {fileID: 162887085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9, y: -3.5, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalPosition: {x: 2.79, y: 0.42, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscenes.unity
     guid: 7b7c1a5af159c054c9a6cbf58d2ce781
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Imp.unity
     guid: 135732c07e13c1345a1c4ea64caf740b
   - enabled: 1
     path: Assets/Scenes/RhythmPrototype.unity
