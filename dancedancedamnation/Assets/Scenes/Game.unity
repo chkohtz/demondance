@@ -1126,7 +1126,7 @@ MonoBehaviour:
   secPerBeat: 0
   dsptimesong: 0
   beatsShownInAdvance: 0
-  beatmap: {fileID: 11400000, guid: bd5986a5f978fd445b0f21389b472ef4, type: 2}
+  beatmap: {fileID: 11400000, guid: b3508e95feb582145b811ce91ff8aacd, type: 2}
   shiftAmount: 0
   spacing: 0
   song: {fileID: 11400000, guid: 1ff54185c2f213b41b8f2814ad9f58b0, type: 2}
