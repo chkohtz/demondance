@@ -40,6 +40,7 @@ public class SongManager : MonoBehaviour
     public GameOverController gameOverController;
     public CutsceneController cutsceneControl;
     public Animator stan;
+    public DialogueManager dialogueManager;
 
     void Start()
     {
@@ -95,6 +96,7 @@ public class SongManager : MonoBehaviour
         wonGame = true;
         UnityEngine.Debug.Log("You win!!!");
         cutsceneControl.gameObject.SetActive(true);
+        dialogueManager.gameObject.SetActive(true);
         stan.SetBool("dead", true);
 
     }

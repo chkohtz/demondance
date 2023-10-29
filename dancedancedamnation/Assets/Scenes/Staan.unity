@@ -1189,7 +1189,7 @@ MonoBehaviour:
   secPerBeat: 0
   dsptimesong: 0
   beatsShownInAdvance: 0
-  beatmap: {fileID: 11400000, guid: 7c30d197d49d97e43a646c9a9d64716b, type: 2}
+  beatmap: {fileID: 11400000, guid: bd5986a5f978fd445b0f21389b472ef4, type: 2}
   shiftAmount: 0
   spacing: 0
   song: {fileID: 11400000, guid: 085b12ec1fac9fc4db5e1b27f32f442d, type: 2}
@@ -1201,6 +1201,7 @@ MonoBehaviour:
   gameOverController: {fileID: 560036744}
   cutsceneControl: {fileID: 865802516}
   stan: {fileID: 162887086}
+  dialogueManager: {fileID: 277036334}
 --- !u!4 &330697852
 Transform:
   m_ObjectHideFlags: 0

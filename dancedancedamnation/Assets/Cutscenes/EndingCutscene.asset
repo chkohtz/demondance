@@ -13,15 +13,9 @@ MonoBehaviour:
   m_Name: EndingCutscene
   m_EditorClassIdentifier: 
   steps:
-  - type: 1
-    dialogue: {fileID: 0}
-    clip: {fileID: 7400000, guid: 3c6b04bb74386e04b816d866d6136e8e, type: 2}
-    audioSource: {fileID: 0}
-    sceneName: 
-    screenShake: 0
   - type: 0
     dialogue: {fileID: 11400000, guid: 97707b8c885667445bebf2517e9f0a1c, type: 2}
-    clip: {fileID: 0}
+    clip: {fileID: 7400000, guid: 3c6b04bb74386e04b816d866d6136e8e, type: 2}
     audioSource: {fileID: 0}
     sceneName: 
     screenShake: 0
