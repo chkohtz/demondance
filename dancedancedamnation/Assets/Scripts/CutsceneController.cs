@@ -56,6 +56,7 @@ public class CutsceneController : MonoBehaviour
                 break;
             case StepType.ImageChange:
                 bgImage.sprite = step.image;
+                bgImage.GetComponent<Animator>().Play(step.clip.name);
                 break;
             case StepType.Wait:
                 waitTime = step.waitTime;
@@ -80,6 +81,8 @@ public class CutsceneStep
     public Sprite? image;
 #nullable disable
     public double waitTime;
+    public bool screenShake;
+    public AnimationClip clip;
 }
 
 public enum StepType
