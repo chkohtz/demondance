@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PoledancingWithSatan
   m_EditorClassIdentifier: Assembly-CSharp::Song
   bpm: 128
-  audioClip: {fileID: 8300000, guid: 7bf5baf8326a4e841bcc570d6f908104, type: 3}
+  audioClip: {fileID: 8300000, guid: 32985fe1b31cd164ab77b833473ec23f, type: 3}
   notes:
   - pos: 3.75
     holdDuration: 0

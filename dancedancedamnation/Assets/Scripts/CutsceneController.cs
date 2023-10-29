@@ -51,6 +51,8 @@ public class CutsceneController : MonoBehaviour
             //TODO: end cutscene
             return;
         }
+
+
         CutsceneStep step = cutscene.steps[stepIndex];
         step.audioSource.Play();
 
