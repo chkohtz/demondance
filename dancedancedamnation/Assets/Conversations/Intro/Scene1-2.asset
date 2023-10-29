@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Scene1-1
+  m_Name: Scene1-2
   m_EditorClassIdentifier: Assembly-CSharp::Conversation
   lines:
   - portrait: {fileID: 0}
     name: Lilith
-    line: Ugh, finally. Out of that damned underworld
+    line: That dance bar looks perfect.
   - portrait: {fileID: 0}
     name: Lilith
-    line: It was getting too stuffy. No room to show off like I should.
+    line: "Ugh, wait, if I walk in there with a name like Lilith, they\u2019ll for
+      sure know imma demon."
   - portrait: {fileID: 0}
     name: Lilith
-    line: "Doesn\u2019t help that demons are barely allowed out. But not be allowed
-      to dance? Ugh, save your crap for a stupider demon"
+    line: "Doesn\u2019t help that these asshole humans banned us, I can\u2019t be
+      too obvious."
   - portrait: {fileID: 0}
     name: Lilith
-    line: "Hmm. Wonder if there\u2019s anywhere better to do my thing.\r\n\r\n"
+    line: "What\u2019s a good nickname for Lilith?"

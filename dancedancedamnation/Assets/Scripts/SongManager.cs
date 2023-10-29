@@ -45,6 +45,7 @@ public class SongManager : MonoBehaviour
         dsptimesong = (float)AudioSettings.dspTime;
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
+        audioSource.clip = beatmap.audioClip;
     }
 
     void Update()
@@ -79,7 +80,7 @@ public class SongManager : MonoBehaviour
             nextIndex++;
         }
 
-        if(songPosition > audioSource.clip.length)
+        if (songPosition > audioSource.clip.length)
         {
             WinGame();
         }

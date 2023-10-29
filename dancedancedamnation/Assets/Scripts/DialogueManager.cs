@@ -49,7 +49,7 @@ public class DialogueManager : MonoBehaviour
             index++;
             if (index >= activeConvo.lines.Count)
             {
-                isFinished=true;
+                isFinished = true;
                 EndDialogue();
                 return;
             }
