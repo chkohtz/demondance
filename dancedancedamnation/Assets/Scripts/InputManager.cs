@@ -106,6 +106,7 @@ public class InputManager : MonoBehaviour
         accuracyText.Set(Accuracy.Miss);
         score.UpdateScore(Accuracy.Miss, 0);
         accuracyAnim.SetTrigger("Set");
+        playerAnim.player.SetTrigger("Hurt");
         breakCombo();
     }
 
