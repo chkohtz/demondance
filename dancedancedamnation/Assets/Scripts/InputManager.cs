@@ -96,11 +96,17 @@ public class InputManager : MonoBehaviour
         }
         else
         {
-            accuracyText.Set(Accuracy.Miss);
-            score.UpdateScore(Accuracy.Miss, 0);
-            accuracyAnim.SetTrigger("Set");
-            breakCombo();
+            Miss();
         }
+    }
+
+    public void Miss()
+    {
+        // Paranoia is incremented in accuracy text
+        accuracyText.Set(Accuracy.Miss);
+        score.UpdateScore(Accuracy.Miss, 0);
+        accuracyAnim.SetTrigger("Set");
+        breakCombo();
     }
 
     void OnDrawGizmos()
