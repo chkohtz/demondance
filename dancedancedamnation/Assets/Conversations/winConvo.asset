@@ -12,4 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: winConvo
   m_EditorClassIdentifier: Assembly-CSharp::Conversation
-  lines: []
+  lines:
+  - portrait: {fileID: 0}
+    name: Guy in Crowd
+    line: Hey he looks kinda like a demon!
+  - portrait: {fileID: 0}
+    name: Woman in Crowd
+    line: "Yeah\u2026i don\u2019t know why we didn\u2019t see it sooner\u2026he\u2019s
+      such a bad dancer."
+  - portrait: {fileID: 0}
+    name: Non-biney in Crowd
+    line: "he even lost to that new girl\r\n\r"
+  - portrait: {fileID: 0}
+    name: woman in crowd
+    line: "and what kind of a name is Staan with two a\u2019s anyways?"
+  - portrait: {fileID: 0}
+    name: Non-Biney in Crowd
+    line: "Oh my god, it\u2019s satan!\r "
+  - portrait: {fileID: 0}
+    name: Guy in crowd
+    line: "Yeah, you switch the letters around, and you get satan!\r"
+  - portrait: {fileID: 0}
+    name: Satan
+    line: "Ugh you humans were BORING anyways.\r"
+  - portrait: {fileID: 0}
+    name: Satan
+    line: "I\u2019ll come back for you yet, little girl. Your days in the underworld
+      are over\r"
+  - portrait: {fileID: 0}
+    name: Lily
+    line: "Oh, like I needed you to tell me that. Do you hear that crowd cheering
+      for me?\r"
+  - portrait: {fileID: 0}
+    name: Satan
+    line: "This world isn\u2019t so easily swayed, little Lily.\r"
+  - portrait: {fileID: 0}
+    name: Lily
+    line: "Are you so dumb you even answer rhetorical questions?\r"

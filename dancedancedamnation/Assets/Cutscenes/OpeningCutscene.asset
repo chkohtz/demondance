@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc52bed047b77143bc9b6bd04505488, type: 3}
   m_Name: OpeningCutscene
   m_EditorClassIdentifier: 
-  steps: []
+  steps:
+  - type: 0
+    dialogue: {fileID: 0}
+    image: {fileID: 0}
+    waitTime: 0
+    screenShake: 0
+    clip: {fileID: 0}

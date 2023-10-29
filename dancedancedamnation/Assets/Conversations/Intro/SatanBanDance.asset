@@ -10,15 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Opening Scene
+  m_Name: SatanBanDance
   m_EditorClassIdentifier: Assembly-CSharp::Conversation
   lines:
   - portrait: {fileID: 0}
     name: ???
-    line: Long ago, Stan, the leader of the underworld
+    line: 'Long ago, Stan, the leader of the underworld
+
+'
   - portrait: {fileID: 0}
     name: ???
-    line: "Declared that no citizen of hell shall, under any circumstances\u2026"
+    line: "Declared that no citizen of hell shall, under any circumstances\u2026\n"
   - portrait: {fileID: 0}
     name: ???
-    line: Dance
+    line: 'Dance
+
+'
+  - portrait: {fileID: 0}
+    name: ???
+    line: 'But dictum be damned...
+
+'
+  - portrait: {fileID: 0}
+    name: ???
+    line: 'Demons have to dance!
+
+'
