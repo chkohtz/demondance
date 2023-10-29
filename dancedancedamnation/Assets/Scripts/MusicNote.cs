@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class MusicNote : MonoBehaviour
 {
@@ -85,7 +86,11 @@ public class MusicNote : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
         float percentageComplete = elapsedTime / moveTime;
+        transform.position = Vector2.Lerp(SpawnPos, RemovePos, curve.Evaluate(percentageComplete));
+
         transform.position = Vector2.Lerp(SpawnPos, RemovePos, elapsedTime*0.5f);
+
+
 
         if(transform.position.Equals(RemovePos))
         {
