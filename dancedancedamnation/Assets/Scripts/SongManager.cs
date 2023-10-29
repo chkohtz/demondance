@@ -35,6 +35,8 @@ public class SongManager : MonoBehaviour
 
     void Start()
     {
+        songPosition = 0;
+        songPosInBeats = 0;
         secPerBeat = 60f / song.bpm;
         dsptimesong = (float)AudioSettings.dspTime;
         audioSource = GetComponent<AudioSource>();
