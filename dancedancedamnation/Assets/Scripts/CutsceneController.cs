@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class CutsceneController : MonoBehaviour
@@ -14,9 +15,13 @@ public class CutsceneController : MonoBehaviour
     [SerializeField]
     public Image bgImage;
 
+    [SerializeField]
+    GameObject inputField;
+
 
 
     private string input;
+    bool receivingInput;
 
 
     private int stepIndex = 0;
@@ -26,6 +31,8 @@ public class CutsceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        receivingInput = false;
+        inputField.SetActive(false);
         dialogueManager.SetState(false);
         AdvanceStep();
     }
@@ -34,9 +41,10 @@ public class CutsceneController : MonoBehaviour
     {
         if (paused) return;
 
-        if(Input.GetKeyDown(KeyCode.Space) && dialogueManager.isFinished && stepIndex <= cutscene.steps.Count)
+        if (!receivingInput)
         {
-            AdvanceStep();
+            if (Input.GetKeyDown(KeyCode.Space) && dialogueManager.isFinished && stepIndex <= cutscene.steps.Count)
+                AdvanceStep();
         }
     }
 
@@ -70,7 +78,9 @@ public class CutsceneController : MonoBehaviour
                 bgImage.GetComponent<Animator>().Play(step.clip.name);
                 break;
             case StepType.Input:
-                // input = 
+                receivingInput = true;
+                dialogueManager.SetState(false);
+                inputField.SetActive(true);
                 break;
         }
 
@@ -79,6 +89,14 @@ public class CutsceneController : MonoBehaviour
 
     public void OnDialogueFinish()
     {
+        AdvanceStep();
+    }
+
+    public void getInput()
+    {
+        input = inputField.GetComponent<TMP_InputField>().text;
+        inputField.SetActive (false);
+        receivingInput = false;
         AdvanceStep();
     }
 }

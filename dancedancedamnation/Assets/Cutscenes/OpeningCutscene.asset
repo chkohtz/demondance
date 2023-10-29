@@ -48,3 +48,8 @@ MonoBehaviour:
     clip: {fileID: 7400000, guid: 2f68f0e71452c964c8fdb968c94d17e0, type: 2}
     audioSource: {fileID: 0}
     screenShake: 0
+  - type: 2
+    dialogue: {fileID: 0}
+    clip: {fileID: 0}
+    audioSource: {fileID: 0}
+    screenShake: 0

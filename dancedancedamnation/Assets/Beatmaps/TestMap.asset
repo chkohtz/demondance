@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestMap
   m_EditorClassIdentifier: 
   bpm: 60
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 166b6d1bad22a4c9faa5aa59360b11f5, type: 3}
   notes:
   - pos: 2
     holdDuration: 0
