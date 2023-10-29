@@ -17,9 +17,17 @@ MonoBehaviour:
     dialogue: {fileID: 11400000, guid: 9e1afa8f54ff8974dabee1fa91a4a724, type: 2}
     clip: {fileID: 7400000, guid: bc282518cd62f004982721bc8bf5d985, type: 2}
     audioSource: {fileID: 0}
+    sceneName: 
     screenShake: 0
   - type: 0
     dialogue: {fileID: 11400000, guid: 41e7b0d17c71ee94d9667ce7298ab162, type: 2}
-    clip: {fileID: 7400000, guid: bc282518cd62f004982721bc8bf5d985, type: 2}
+    clip: {fileID: 7400000, guid: 02cc668c7e0f56c4690b70c9ee9a6cb8, type: 2}
     audioSource: {fileID: 0}
+    sceneName: 
+    screenShake: 0
+  - type: 3
+    dialogue: {fileID: 0}
+    clip: {fileID: 0}
+    audioSource: {fileID: 0}
+    sceneName: Game
     screenShake: 0

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class CutsceneController : MonoBehaviour
 {
     [SerializeField]
-    public Cutscene cutscene;
+    public List<Cutscene> cutsceneList;
     private Image currentImage;
     [SerializeField]
     public DialogueManager dialogueManager;
@@ -18,14 +18,13 @@ public class CutsceneController : MonoBehaviour
     [SerializeField]
     GameObject inputField;
 
-
+    private int cutsceneIndex = 0;
 
     private string input;
     bool receivingInput;
 
 
     private int stepIndex = 0;
-    private double waitTime = 0;
     private bool paused = false;
 
     // Start is called before the first frame update
@@ -43,7 +42,7 @@ public class CutsceneController : MonoBehaviour
 
         if (!receivingInput)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && dialogueManager.isFinished && stepIndex <= cutscene.steps.Count)
+            if (Input.GetKeyDown(KeyCode.Space) && dialogueManager.isFinished && stepIndex <= cutsceneList[cutsceneIndex].steps.Count)
                 AdvanceStep();
         }
     }
@@ -53,13 +52,15 @@ public class CutsceneController : MonoBehaviour
         Debug.Log("advance step: " + stepIndex);
 
         paused = false;
-        if (stepIndex >= cutscene.steps.Count)
+        if (stepIndex >= cutsceneList[cutsceneIndex].steps.Count)
         {
             //TODO: end cutscene
+            stepIndex = 0;
+            cutsceneIndex++;
             Debug.Log("OwO");
             return;
         }
-        CutsceneStep step = cutscene.steps[stepIndex];
+        CutsceneStep step = cutsceneList[cutsceneIndex].steps[stepIndex];
 
         stepIndex++;
 
@@ -81,6 +82,11 @@ public class CutsceneController : MonoBehaviour
                 receivingInput = true;
                 dialogueManager.SetState(false);
                 inputField.SetActive(true);
+                break;
+            case StepType.SceneChange:
+                dialogueManager.SetState(false);
+                inputField.SetActive(false);
+                SceneManager.LoadSceneAsync(step.sceneName);
                 break;
         }
 
@@ -110,6 +116,7 @@ public class CutsceneStep
 #nullable disable
     public AnimationClip? clip;
     public AudioSource audioSource;
+    public string sceneName;
     public bool screenShake;
 }
 
@@ -118,4 +125,5 @@ public enum StepType
     Dialog,
     ImageChange,
     Input,
+    SceneChange
 }
