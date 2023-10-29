@@ -14,6 +14,10 @@ public class SongManager : MonoBehaviour
     public float dsptimesong;
     public float beatsShownInAdvance;
 
+
+    public float shiftAmount;
+    public float spacing;
+
     [SerializeField]
     AudioSource audioSource;
 
@@ -80,6 +84,24 @@ public class SongManager : MonoBehaviour
         wonGame = true;
         UnityEngine.Debug.Log("You win!!!");
     }
+
+    [ContextMenu("Shift Notes")]
+    public void shiftNotes()
+    {
+        foreach (Note note in song.notes)
+        {
+            note.pos += shiftAmount;
+        }
+    }
+
+    [ContextMenu("Space Notes")]
+    public void spaceNotes()
+    {
+        foreach (Note note in song.notes)
+        {
+            note.pos *= spacing;
+        }
+    }
 }
 
 
@@ -90,6 +112,8 @@ public class Song : ScriptableObject
     public AudioClip audioClip;
     [SerializeField]
     public Note[] notes;
+
+    
 }
 
 [System.Serializable]
