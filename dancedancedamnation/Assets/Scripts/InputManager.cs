@@ -18,6 +18,9 @@ public class InputManager : MonoBehaviour
     public Animator leftAnim;
     public Animator rightAnim;
 
+    public GameOverController gameOverController;
+
+
 
 
     [SerializeField]
@@ -72,7 +75,7 @@ public class InputManager : MonoBehaviour
     {
         comboText.text = combo.ToString();
 
-        if (Input.anyKey)
+        if (Input.anyKey && !gameOverController.game_over)
         {
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
