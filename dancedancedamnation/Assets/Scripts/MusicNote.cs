@@ -21,7 +21,7 @@ public class MusicNote : MonoBehaviour
     SongManager songManager;
     InputManager inputManager;
 
-    private float noteSpacing = 1.5f;
+    private float noteSpacing = 1.1f;
 
     [SerializeField]
     Sprite upArrow;
@@ -56,14 +56,14 @@ public class MusicNote : MonoBehaviour
                 break;
             case Direction.Down:
                 sr.sprite = downArrow;
-                SpawnPos += new Vector2(-1 * noteSpacing, 0);
-                RemovePos += new Vector2(-1 * noteSpacing, 0);
+                SpawnPos += new Vector2(-.67f * noteSpacing, 0);
+                RemovePos += new Vector2(-.67f * noteSpacing, 0);
                 arrowSound.Play();
                 break;
             case Direction.Up:
                 sr.sprite = upArrow;
-                SpawnPos += new Vector2(1 * noteSpacing, 0);
-                RemovePos += new Vector2(1 * noteSpacing, 0);
+                SpawnPos += new Vector2(.67f * noteSpacing, 0);
+                RemovePos += new Vector2(.67f * noteSpacing, 0);
                 arrowSound.Play();
                 break;
             case Direction.Right:
