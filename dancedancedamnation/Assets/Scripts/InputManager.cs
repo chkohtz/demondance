@@ -8,6 +8,11 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     public GameObject bar;
 
+    public GameObject up;
+    public GameObject down;
+    public GameObject left;
+    public GameObject right;
+
     [SerializeField]
     public PlayerAnimator playerAnim;
 
@@ -87,7 +92,24 @@ public class InputManager : MonoBehaviour
 
     void directionInput(Direction dir)
     {
-        hitColliders = Physics2D.OverlapBoxAll(bar.transform.position, bar.transform.localScale, 0, m_LayerMask);
+        switch (dir)
+        {
+            case Direction.Up:
+                hitColliders = Physics2D.OverlapBoxAll(up.transform.position, up.transform.localScale, 0, m_LayerMask);
+                break;
+            case Direction.Down:
+                hitColliders = Physics2D.OverlapBoxAll(down.transform.position, down.transform.localScale, 0, m_LayerMask);
+                break;
+            case Direction.Left:
+                hitColliders = Physics2D.OverlapBoxAll(left.transform.position, left.transform.localScale, 0, m_LayerMask);
+                break;
+            case Direction.Right:
+                hitColliders = Physics2D.OverlapBoxAll(right.transform.position, right.transform.localScale, 0, m_LayerMask);
+                break;
+
+            
+
+        }
         if (hitColliders.Length > 0)
         {
             foreach (Collider2D collider in hitColliders)
@@ -126,7 +148,7 @@ public class InputManager : MonoBehaviour
         }
         else
         {
-            //Miss();
+            Miss();
         }
     }
 
