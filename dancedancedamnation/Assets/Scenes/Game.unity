@@ -1135,6 +1135,7 @@ MonoBehaviour:
   spawnPos: {fileID: 1172766969}
   endPos: {fileID: 1680612073}
   wonGame: 0
+  gameOverController: {fileID: 560036744}
 --- !u!4 &330697852
 Transform:
   m_ObjectHideFlags: 0
@@ -1817,6 +1818,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c023853f78aecc641966d1e7ee701815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_over: 0
+  songManager: {fileID: 330697851}
+  scratch: {fileID: 8300000, guid: cd7e01db12dce634386290f83908549d, type: 3}
+  boos: {fileID: 8300000, guid: cb8dbe6c8c67509418dee990346cc06a, type: 3}
+  playerAnimator: {fileID: 669952783}
+  enemyAnimator: {fileID: 162887086}
 --- !u!1 &572714221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2335,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d9a1c55a4b87144bd11dfce9651b42, type: 3}
+--- !u!95 &669952783 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1642377121587744372, guid: 78d9a1c55a4b87144bd11dfce9651b42, type: 3}
+  m_PrefabInstance: {fileID: 669952782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &706310674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,6 +3730,7 @@ MonoBehaviour:
   downAnim: {fileID: 1193424247}
   leftAnim: {fileID: 1879781917}
   rightAnim: {fileID: 1947931681}
+  gameOverController: {fileID: 560036744}
   playerAnim: {fileID: 1267234733}
   m_LayerMask:
     serializedVersion: 2

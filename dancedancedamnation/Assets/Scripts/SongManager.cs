@@ -37,8 +37,6 @@ public class SongManager : MonoBehaviour
 
     public bool wonGame;
 
-
-
     public GameOverController gameOverController;
 
     void Start()
@@ -48,8 +46,9 @@ public class SongManager : MonoBehaviour
         secPerBeat = 60f / beatmap.bpm;
         dsptimesong = (float)AudioSettings.dspTime;
         audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         audioSource.clip = beatmap.audioClip;
+        audioSource.Play();
+
     }
 
     void Update()
