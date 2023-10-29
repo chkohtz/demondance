@@ -38,6 +38,8 @@ public class SongManager : MonoBehaviour
     public bool wonGame;
 
     public GameOverController gameOverController;
+    public CutsceneController cutsceneControl;
+    public Animator stan;
 
     void Start()
     {
@@ -48,7 +50,6 @@ public class SongManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = beatmap.audioClip;
         audioSource.Play();
-
     }
 
     void Update()
@@ -93,6 +94,9 @@ public class SongManager : MonoBehaviour
     {
         wonGame = true;
         UnityEngine.Debug.Log("You win!!!");
+        cutsceneControl.gameObject.SetActive(true);
+        stan.SetBool("dead", true);
+
     }
 
     [ContextMenu("Shift Notes (Beatmap)")]

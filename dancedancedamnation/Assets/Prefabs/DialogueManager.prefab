@@ -55,8 +55,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cfbbde4647da01439532bb67797a011, type: 2}
   activeConvo: {fileID: 11400000, guid: 2cfbbde4647da01439532bb67797a011, type: 2}
   canAdvance: 0
+  isFinished: 0
   audio: {fileID: 4857964855885488758}
   clip: {fileID: 8300000, guid: 4055fd678e13eb040ac8ab70ede22fd9, type: 3}
+  autoStart: 0
 --- !u!82 &4857964855885488758
 AudioSource:
   m_ObjectHideFlags: 0
@@ -475,8 +477,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8ca222c09b9c2764faa0b1058763ca7b, type: 2}
+  m_sharedMaterial: {fileID: -1556145665717878739, guid: 8ca222c09b9c2764faa0b1058763ca7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -685,8 +687,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8ca222c09b9c2764faa0b1058763ca7b, type: 2}
+  m_sharedMaterial: {fileID: -1556145665717878739, guid: 8ca222c09b9c2764faa0b1058763ca7b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
