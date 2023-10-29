@@ -859,9 +859,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dee6254137bacac45bbea023cb359756, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7bf5baf8326a4e841bcc570d6f908104, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.123
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -962,11 +962,14 @@ MonoBehaviour:
   secPerBeat: 0
   dsptimesong: 0
   beatsShownInAdvance: 0
+  shiftAmount: 1.5
+  spacing: 1
   audioSource: {fileID: 330697850}
   song: {fileID: 11400000, guid: 085b12ec1fac9fc4db5e1b27f32f442d, type: 2}
   notePrefab: {fileID: 6380820595609815455, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
   spawnPos: {fileID: 1172766969}
   endPos: {fileID: 1680612073}
+  wonGame: 0
 --- !u!4 &330697852
 Transform:
   m_ObjectHideFlags: 0
