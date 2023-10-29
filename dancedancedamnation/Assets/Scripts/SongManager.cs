@@ -37,6 +37,10 @@ public class SongManager : MonoBehaviour
 
     public bool wonGame;
 
+
+
+    public GameOverController gameOverController;
+
     void Start()
     {
         songPosition = 0;
@@ -50,7 +54,7 @@ public class SongManager : MonoBehaviour
 
     void Update()
     {
-        if (wonGame)
+        if (wonGame || gameOverController.game_over)
         {
             return;
         }
