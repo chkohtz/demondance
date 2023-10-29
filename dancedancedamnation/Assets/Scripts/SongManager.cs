@@ -27,6 +27,8 @@ public class SongManager : MonoBehaviour
 
     private Queue<MusicNote> activeNotes;
 
+    public bool wonGame;
+
     void Start()
     {
         secPerBeat = 60f / song.bpm;
@@ -37,6 +39,10 @@ public class SongManager : MonoBehaviour
 
     void Update()
     {
+        if (wonGame)
+        {
+            return;
+        }
         //debug spawn arrows
         //if(Input.GetKeyDown(KeyCode.J))
         //{
@@ -62,8 +68,20 @@ public class SongManager : MonoBehaviour
 
             nextIndex++;
         }
+
+        if(songPosition > audioSource.clip.length)
+        {
+            WinGame();
+        }
+    }
+
+    void WinGame()
+    {
+        wonGame = true;
+        UnityEngine.Debug.Log("You win!!!");
     }
 }
+
 
 [CreateAssetMenu(fileName = "Data", menuName = "Song", order = 1)]
 public class Song : ScriptableObject
