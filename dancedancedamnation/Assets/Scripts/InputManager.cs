@@ -151,7 +151,7 @@ public class InputManager : MonoBehaviour
                 {
                     Perfect(musicNote);
                 }
-                Destroy(collider.gameObject); // Change to cool animation later
+                musicNote.Kill();// Change to cool animation later
                 accuracyText.Set(accuracy);
                 accuracyAnim.SetTrigger("Set");
                 score.UpdateScore(accuracy, combo);
