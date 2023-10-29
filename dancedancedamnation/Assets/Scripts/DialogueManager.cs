@@ -28,6 +28,9 @@ public class DialogueManager : MonoBehaviour
     public bool canAdvance;
     int index = 0;
 
+    public AudioSource audio;
+    public AudioClip clip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +73,11 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in dialogue.line.ToCharArray())
         {
             boxText.text += c;
-            yield return new WaitForSeconds(.025f);
+            if(c != ' ' && c!= '\n')
+            {
+                audio.PlayOneShot(clip);
+            }
+            yield return new WaitForSeconds(.03f);
         }
         canAdvance = true;
     }
