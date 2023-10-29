@@ -15,7 +15,10 @@ MonoBehaviour:
   lines:
   - portrait: {fileID: 0}
     name: ???
-    line: come on this sewer thing can't be that heavy
+    line: Long ago, Stan, the leader of the underworld
   - portrait: {fileID: 0}
     name: ???
-    line: oh hey there we go
+    line: "Declared that no citizen of hell shall, under any circumstances\u2026"
+  - portrait: {fileID: 0}
+    name: ???
+    line: Dance
