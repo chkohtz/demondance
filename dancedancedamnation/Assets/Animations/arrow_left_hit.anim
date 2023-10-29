@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: arrow_down_hit
+  m_Name: arrow_left_hit
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -174,7 +174,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.49803922
+        value: 0.34117648
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -522,7 +522,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.49803922
+        value: 0.34117648
         inSlope: 0
         outSlope: 0
         tangentMode: 136
