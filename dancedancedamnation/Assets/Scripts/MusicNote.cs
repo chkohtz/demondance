@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
@@ -36,6 +37,9 @@ public class MusicNote : MonoBehaviour
 
     private SpriteRenderer sr;
 
+    public bool isDead = false;
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +49,8 @@ public class MusicNote : MonoBehaviour
         beatOfThisNote = note.pos;
         sr = GetComponent<SpriteRenderer>();
         arrowSound = GetComponent<AudioSource>();
+
+
 
         switch (note.direction)
         {
@@ -81,21 +87,31 @@ public class MusicNote : MonoBehaviour
 
     }
 
+    public void Kill()
+    {
+        isDead = true;
+        animator.SetBool("isDead", true);
+        Destroy(gameObject, 1);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        float percentageComplete = elapsedTime / moveTime;
-        transform.position = Vector2.Lerp(SpawnPos, RemovePos, curve.Evaluate(percentageComplete));
-
-        transform.position = Vector2.Lerp(SpawnPos, RemovePos, elapsedTime*0.5f);
-
-
-
-        if(transform.position.Equals(RemovePos))
+        if (!isDead)
         {
-            inputManager.Miss();
-            Destroy(gameObject);
+            elapsedTime += Time.deltaTime;
+            float percentageComplete = elapsedTime / moveTime;
+            transform.position = Vector2.Lerp(SpawnPos, RemovePos, curve.Evaluate(percentageComplete));
+
+            transform.position = Vector2.Lerp(SpawnPos, RemovePos, elapsedTime * 0.5f);
+
+
+
+            if (transform.position.Equals(RemovePos))
+            {
+                inputManager.Miss();
+                Destroy(gameObject);
+            }
         }
     }
 
