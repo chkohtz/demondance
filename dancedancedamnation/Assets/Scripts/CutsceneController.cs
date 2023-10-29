@@ -17,6 +17,10 @@ public class CutsceneController : MonoBehaviour
     public Image bgImage;
 
 
+
+    private string input;
+
+
     private int stepIndex = 0;
     private double waitTime = 0;
     private bool paused = false;
@@ -48,6 +52,7 @@ public class CutsceneController : MonoBehaviour
             return;
         }
         CutsceneStep step = cutscene.steps[stepIndex];
+        step.audioSource.Play();
 
         switch (step.type) {
             case StepType.Dialog:
@@ -60,6 +65,9 @@ public class CutsceneController : MonoBehaviour
                 break;
             case StepType.Wait:
                 waitTime = step.waitTime;
+                break;
+            case StepType.Input:
+                // input = 
                 break;
         }
 
@@ -83,6 +91,7 @@ public class CutsceneStep
     public double waitTime;
     public bool screenShake;
     public AnimationClip clip;
+    public AudioSource audioSource;
 }
 
 public enum StepType
@@ -90,4 +99,5 @@ public enum StepType
     Dialog,
     ImageChange,
     Wait,
+    Input,
 }
