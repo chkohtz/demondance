@@ -1,8 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.TerrainTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +13,7 @@ public class SongManager : MonoBehaviour
     public Beatmap beatmap;
 
     [Header("Other")]
-
+    public SongMap songMap;
     private AudioSource audioSource;
 
     int nextIndex = 0;
@@ -75,6 +71,14 @@ public class SongManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Convert")]
+    public void convert()
+    {
+        beatmap.audioClip = songMap.audioClip;
+        beatmap.bpm = songMap.bpm;
+        beatmap.notes = songMap.notes;
+    }
+
     void WinGame()
     {
         wonGame = true;
@@ -84,8 +88,8 @@ public class SongManager : MonoBehaviour
         if (isStaan)
         {
             stan.SetBool("dead", true);
-            cutsceneControl.gameObject.SetActive(true);
-            dialogueManager.gameObject.SetActive(true);
+            //cutsceneControl.gameObject.SetActive(true);
+            //dialogueManager.gameObject.SetActive(true);
         }
         else
         {

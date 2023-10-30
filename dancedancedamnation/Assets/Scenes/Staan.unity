@@ -2448,74 +2448,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907443148}
   m_CullTransparentMesh: 1
---- !u!1001 &997435311
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352585600444341573, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405442237560374198, guid: 05372fce973984a47b72789cad94750f, type: 3}
-      propertyPath: m_Name
-      value: Beatmap
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 05372fce973984a47b72789cad94750f, type: 3}
---- !u!114 &997435312 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1544999755774266492, guid: 05372fce973984a47b72789cad94750f, type: 3}
-  m_PrefabInstance: {fileID: 997435311}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3056b07ffbebad448d3e68a02f6aba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1027842536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,6 +4912,734 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1544999756219952083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6405442238186415129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3056b07ffbebad448d3e68a02f6aba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  bpm: 128
+  notes:
+  - pos: 3.75
+    holdDuration: 0
+    direction: 0
+  - pos: 4.25
+    holdDuration: 0
+    direction: 1
+  - pos: 4.5
+    holdDuration: 0
+    direction: 0
+  - pos: 5
+    holdDuration: 0
+    direction: 1
+  - pos: 5.5
+    holdDuration: 0
+    direction: 0
+  - pos: 5.75
+    holdDuration: 0
+    direction: 3
+  - pos: 6
+    holdDuration: 0
+    direction: 1
+  - pos: 6.25
+    holdDuration: 0
+    direction: 2
+  - pos: 6.75
+    holdDuration: 0
+    direction: 0
+  - pos: 7.25
+    holdDuration: 0
+    direction: 1
+  - pos: 7.75
+    holdDuration: 0
+    direction: 0
+  - pos: 8
+    holdDuration: 0
+    direction: 1
+  - pos: 8.5
+    holdDuration: 0
+    direction: 0
+  - pos: 9
+    holdDuration: 0
+    direction: 1
+  - pos: 9.5
+    holdDuration: 0
+    direction: 0
+  - pos: 9.75
+    holdDuration: 0
+    direction: 3
+  - pos: 10
+    holdDuration: 0
+    direction: 1
+  - pos: 10.25
+    holdDuration: 0
+    direction: 2
+  - pos: 10.75
+    holdDuration: 0
+    direction: 0
+  - pos: 11.25
+    holdDuration: 0
+    direction: 1
+  - pos: 11.75
+    holdDuration: 0
+    direction: 0
+  - pos: 12.25
+    holdDuration: 0
+    direction: 2
+  - pos: 12.5
+    holdDuration: 0
+    direction: 3
+  - pos: 12.75
+    holdDuration: 0
+    direction: 0
+  - pos: 13
+    holdDuration: 0
+    direction: 1
+  - pos: 13
+    holdDuration: 0
+    direction: 1
+  - pos: 13.5
+    holdDuration: 0
+    direction: 0
+  - pos: 13.75
+    holdDuration: 0
+    direction: 3
+  - pos: 14
+    holdDuration: 0
+    direction: 1
+  - pos: 14.25
+    holdDuration: 0
+    direction: 2
+  - pos: 14.75
+    holdDuration: 0
+    direction: 0
+  - pos: 15.25
+    holdDuration: 0
+    direction: 1
+  - pos: 15.75
+    holdDuration: 0
+    direction: 0
+  - pos: 16
+    holdDuration: 0
+    direction: 1
+  - pos: 16.5
+    holdDuration: 0
+    direction: 0
+  - pos: 16.5
+    holdDuration: 0
+    direction: 0
+  - pos: 17
+    holdDuration: 0
+    direction: 1
+  - pos: 17.5
+    holdDuration: 0
+    direction: 0
+  - pos: 18
+    holdDuration: 0
+    direction: 1
+  - pos: 18.5
+    holdDuration: 0
+    direction: 0
+  - pos: 19
+    holdDuration: 0
+    direction: 1
+  - pos: 19.5
+    holdDuration: 0
+    direction: 0
+  - pos: 20
+    holdDuration: 0
+    direction: 1
+  - pos: 20.5
+    holdDuration: 0
+    direction: 0
+  - pos: 20.5
+    holdDuration: 0
+    direction: 0
+  - pos: 20.5
+    holdDuration: 0
+    direction: 0
+  - pos: 21
+    holdDuration: 0
+    direction: 0
+  - pos: 21.75
+    holdDuration: 0
+    direction: 3
+  - pos: 22.5
+    holdDuration: 0
+    direction: 1
+  - pos: 24
+    holdDuration: 0
+    direction: 3
+  - pos: 24.5
+    holdDuration: 0
+    direction: 2
+  - pos: 24.5
+    holdDuration: 0
+    direction: 2
+  - pos: 28
+    holdDuration: 0
+    direction: 0
+  - pos: 29
+    holdDuration: 0
+    direction: 1
+  - pos: 33
+    holdDuration: 0
+    direction: 1
+  - pos: 33.5
+    holdDuration: 0
+    direction: 0
+  - pos: 34
+    holdDuration: 0
+    direction: 1
+  - pos: 35
+    holdDuration: 0
+    direction: 0
+  - pos: 36
+    holdDuration: 0
+    direction: 1
+  - pos: 37
+    holdDuration: 0
+    direction: 0
+  - pos: 38
+    holdDuration: 0
+    direction: 1
+  - pos: 39
+    holdDuration: 0
+    direction: 0
+  - pos: 39.75
+    holdDuration: 0
+    direction: 3
+  - pos: 40.5
+    holdDuration: 0
+    direction: 1
+  - pos: 42
+    holdDuration: 0
+    direction: 3
+  - pos: 42.5
+    holdDuration: 0
+    direction: 2
+  - pos: 46
+    holdDuration: 0
+    direction: 0
+  - pos: 47
+    holdDuration: 0
+    direction: 1
+  - pos: 50
+    holdDuration: 0
+    direction: 0
+  - pos: 50.5
+    holdDuration: 0
+    direction: 1
+  - pos: 51
+    holdDuration: 0
+    direction: 0
+  - pos: 52
+    holdDuration: 0
+    direction: 1
+  - pos: 53
+    holdDuration: 0
+    direction: 0
+  - pos: 54
+    holdDuration: 0
+    direction: 1
+  - pos: 55
+    holdDuration: 0
+    direction: 1
+  - pos: 55.5
+    holdDuration: 0
+    direction: 0
+  - pos: 56
+    holdDuration: 0
+    direction: 0
+  - pos: 57
+    holdDuration: 0
+    direction: 0
+  - pos: 57.5
+    holdDuration: 0
+    direction: 3
+  - pos: 58
+    holdDuration: 0
+    direction: 2
+  - pos: 58.25
+    holdDuration: 0
+    direction: 1
+  - pos: 58.75
+    holdDuration: 0
+    direction: 0
+  - pos: 59.5
+    holdDuration: 0
+    direction: 3
+  - pos: 60
+    holdDuration: 0
+    direction: 2
+  - pos: 60.25
+    holdDuration: 0
+    direction: 1
+  - pos: 60.75
+    holdDuration: 0
+    direction: 0
+  - pos: 70
+    holdDuration: 0
+    direction: 3
+  - pos: 70.25
+    holdDuration: 0
+    direction: 2
+  - pos: 71
+    holdDuration: 0
+    direction: 1
+  - pos: 71.5
+    holdDuration: 0
+    direction: 1
+  - pos: 72
+    holdDuration: 0
+    direction: 1
+  - pos: 72.5
+    holdDuration: 0
+    direction: 0
+  - pos: 73
+    holdDuration: 0
+    direction: 0
+  - pos: 74
+    holdDuration: 0
+    direction: 0
+  - pos: 74.5
+    holdDuration: 0
+    direction: 3
+  - pos: 75
+    holdDuration: 0
+    direction: 2
+  - pos: 75.25
+    holdDuration: 0
+    direction: 1
+  - pos: 75.75
+    holdDuration: 0
+    direction: 0
+  - pos: 76.5
+    holdDuration: 0
+    direction: 3
+  - pos: 77
+    holdDuration: 0
+    direction: 2
+  - pos: 77.25
+    holdDuration: 0
+    direction: 1
+  - pos: 77.75
+    holdDuration: 0
+    direction: 0
+  - pos: 78.25
+    holdDuration: 0
+    direction: 0
+  - pos: 78.5
+    holdDuration: 0
+    direction: 3
+  - pos: 78.75
+    holdDuration: 0
+    direction: 2
+  - pos: 79
+    holdDuration: 0
+    direction: 3
+  - pos: 79.25
+    holdDuration: 0
+    direction: 2
+  - pos: 79.5
+    holdDuration: 0
+    direction: 0
+  - pos: 79.5
+    holdDuration: 0
+    direction: 0
+  - pos: 80
+    holdDuration: 0
+    direction: 0
+  - pos: 86
+    holdDuration: 0
+    direction: 0
+  - pos: 87
+    holdDuration: 0
+    direction: 0
+  - pos: 88
+    holdDuration: 0
+    direction: 1
+  - pos: 92
+    holdDuration: 0
+    direction: 0
+  - pos: 93
+    holdDuration: 0
+    direction: 3
+  - pos: 94
+    holdDuration: 0
+    direction: 2
+  - pos: 95.5
+    holdDuration: 0
+    direction: 3
+  - pos: 96
+    holdDuration: 0
+    direction: 1
+  - pos: 96.5
+    holdDuration: 0
+    direction: 0
+  - pos: 97
+    holdDuration: 0
+    direction: 0
+  - pos: 98
+    holdDuration: 0
+    direction: 0
+  - pos: 98.5
+    holdDuration: 0
+    direction: 3
+  - pos: 99
+    holdDuration: 0
+    direction: 2
+  - pos: 99.25
+    holdDuration: 0
+    direction: 3
+  - pos: 99.75
+    holdDuration: 0
+    direction: 0
+  - pos: 100.5
+    holdDuration: 0
+    direction: 3
+  - pos: 101
+    holdDuration: 0
+    direction: 2
+  - pos: 101.25
+    holdDuration: 0
+    direction: 3
+  - pos: 101.75
+    holdDuration: 0
+    direction: 0
+  - pos: 102
+    holdDuration: 0
+    direction: 1
+  - pos: 102.25
+    holdDuration: 0
+    direction: 0
+  - pos: 103
+    holdDuration: 0
+    direction: 1
+  - pos: 103.5
+    holdDuration: 0
+    direction: 0
+  - pos: 104
+    holdDuration: 0
+    direction: 1
+  - pos: 104.5
+    holdDuration: 0
+    direction: 0
+  - pos: 105
+    holdDuration: 0
+    direction: 0
+  - pos: 106
+    holdDuration: 0
+    direction: 0
+  - pos: 106.5
+    holdDuration: 0
+    direction: 3
+  - pos: 107
+    holdDuration: 0
+    direction: 2
+  - pos: 107.25
+    holdDuration: 0
+    direction: 3
+  - pos: 107.75
+    holdDuration: 0
+    direction: 0
+  - pos: 108.5
+    holdDuration: 0
+    direction: 3
+  - pos: 109
+    holdDuration: 0
+    direction: 2
+  - pos: 109.25
+    holdDuration: 0
+    direction: 3
+  - pos: 109.75
+    holdDuration: 0
+    direction: 0
+  - pos: 110.25
+    holdDuration: 0
+    direction: 3
+  - pos: 110.5
+    holdDuration: 0
+    direction: 2
+  - pos: 110.75
+    holdDuration: 0
+    direction: 3
+  - pos: 111
+    holdDuration: 0
+    direction: 2
+  - pos: 111.25
+    holdDuration: 0
+    direction: 3
+  - pos: 111.5
+    holdDuration: 0
+    direction: 0
+  - pos: 112
+    holdDuration: 0
+    direction: 1
+  - pos: 114.5
+    holdDuration: 0
+    direction: 0
+  - pos: 115
+    holdDuration: 0
+    direction: 3
+  - pos: 115.25
+    holdDuration: 0
+    direction: 2
+  - pos: 115.75
+    holdDuration: 0
+    direction: 3
+  - pos: 116.5
+    holdDuration: 0
+    direction: 0
+  - pos: 118.5
+    holdDuration: 0
+    direction: 1
+  - pos: 119
+    holdDuration: 0
+    direction: 0
+  - pos: 119.25
+    holdDuration: 0
+    direction: 1
+  - pos: 119.75
+    holdDuration: 0
+    direction: 3
+  - pos: 120.5
+    holdDuration: 0
+    direction: 2
+  - pos: 123.5
+    holdDuration: 0
+    direction: 1
+  - pos: 124
+    holdDuration: 0
+    direction: 0
+  - pos: 124.25
+    holdDuration: 0
+    direction: 0
+  - pos: 124.5
+    holdDuration: 0
+    direction: 0
+  - pos: 124.75
+    holdDuration: 0
+    direction: 0
+  - pos: 125.5
+    holdDuration: 0
+    direction: 1
+  - pos: 126
+    holdDuration: 0
+    direction: 0
+  - pos: 126.25
+    holdDuration: 0
+    direction: 0
+  - pos: 126.5
+    holdDuration: 0
+    direction: 0
+  - pos: 126.75
+    holdDuration: 0
+    direction: 0
+  - pos: 127.5
+    holdDuration: 0
+    direction: 1
+  - pos: 128
+    holdDuration: 0
+    direction: 0
+  - pos: 130.5
+    holdDuration: 0
+    direction: 0
+  - pos: 131
+    holdDuration: 0
+    direction: 3
+  - pos: 131.25
+    holdDuration: 0
+    direction: 2
+  - pos: 131.75
+    holdDuration: 0
+    direction: 3
+  - pos: 132.5
+    holdDuration: 0
+    direction: 0
+  - pos: 128
+    holdDuration: 0
+    direction: 0
+  - pos: 134.5
+    holdDuration: 0
+    direction: 1
+  - pos: 135
+    holdDuration: 0
+    direction: 0
+  - pos: 135.25
+    holdDuration: 0
+    direction: 1
+  - pos: 135.75
+    holdDuration: 0
+    direction: 3
+  - pos: 136.5
+    holdDuration: 0
+    direction: 2
+  - pos: 139.5
+    holdDuration: 0
+    direction: 1
+  - pos: 140
+    holdDuration: 0
+    direction: 0
+  - pos: 140.25
+    holdDuration: 0
+    direction: 0
+  - pos: 140.5
+    holdDuration: 0
+    direction: 0
+  - pos: 140.75
+    holdDuration: 0
+    direction: 0
+  - pos: 141.5
+    holdDuration: 0
+    direction: 1
+  - pos: 142
+    holdDuration: 0
+    direction: 0
+  - pos: 142.25
+    holdDuration: 0
+    direction: 0
+  - pos: 142.5
+    holdDuration: 0
+    direction: 0
+  - pos: 142.75
+    holdDuration: 0
+    direction: 0
+  - pos: 143.5
+    holdDuration: 0
+    direction: 1
+  - pos: 146
+    holdDuration: 0
+    direction: 1
+  - pos: 148
+    holdDuration: 0
+    direction: 0
+  - pos: 149
+    holdDuration: 0
+    direction: 3
+  - pos: 149.5
+    holdDuration: 0
+    direction: 2
+  - pos: 150.5
+    holdDuration: 0
+    direction: 3
+  - pos: 151.5
+    holdDuration: 0
+    direction: 1
+  - pos: 158
+    holdDuration: 0
+    direction: 0
+  - pos: 159
+    holdDuration: 0
+    direction: 1
+  - pos: 159.5
+    holdDuration: 0
+    direction: 1
+  - pos: 160
+    holdDuration: 0
+    direction: 0
+  - pos: 162
+    holdDuration: 0
+    direction: 1
+  - pos: 164
+    holdDuration: 0
+    direction: 0
+  - pos: 165
+    holdDuration: 0
+    direction: 3
+  - pos: 165.5
+    holdDuration: 0
+    direction: 2
+  - pos: 166
+    holdDuration: 0
+    direction: 3
+  - pos: 166.5
+    holdDuration: 0
+    direction: 2
+  - pos: 168
+    holdDuration: 0
+    direction: 1
+  - pos: 176
+    holdDuration: 0
+    direction: 1
+  - pos: 176.75
+    holdDuration: 0
+    direction: 1
+  - pos: 177.25
+    holdDuration: 0
+    direction: 1
+  - pos: 177.75
+    holdDuration: 0
+    direction: 1
+  - pos: 178.5
+    holdDuration: 0
+    direction: 0
+  - pos: 179
+    holdDuration: 0
+    direction: 1
+  - pos: 180
+    holdDuration: 0
+    direction: 1
+  - pos: 180.75
+    holdDuration: 0
+    direction: 1
+  - pos: 180.75
+    holdDuration: 0
+    direction: 1
+  - pos: 181.25
+    holdDuration: 0
+    direction: 1
+  - pos: 181.75
+    holdDuration: 0
+    direction: 1
+  - pos: 183
+    holdDuration: 0
+    direction: 0
+  - pos: 184
+    holdDuration: 0
+    direction: 1
+  - pos: 184.75
+    holdDuration: 0
+    direction: 1
+  - pos: 185.25
+    holdDuration: 0
+    direction: 1
+  - pos: 185.75
+    holdDuration: 0
+    direction: 1
+  - pos: 186.5
+    holdDuration: 0
+    direction: 0
+  - pos: 187
+    holdDuration: 0
+    direction: 1
+  - pos: 187
+    holdDuration: 0
+    direction: 1
+  - pos: 188
+    holdDuration: 0
+    direction: 1
+  - pos: 188.75
+    holdDuration: 0
+    direction: 1
+  - pos: 189.25
+    holdDuration: 0
+    direction: 1
+  - pos: 189.75
+    holdDuration: 0
+    direction: 1
+  - pos: 191.25
+    holdDuration: 0
+    direction: 1
+  shiftAmount: 0
+  spacing: 0
 --- !u!4 &2335192787746030850
 Transform:
   m_ObjectHideFlags: 0
@@ -5091,6 +5751,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &4352585600084523754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6405442238186415129}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4766940530243031299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5104,6 +5779,23 @@ GameObject:
   - component: {fileID: 3784626956748088789}
   m_Layer: 0
   m_Name: SongManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &6405442238186415129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4352585600084523754}
+  - component: {fileID: 1544999756219952083}
+  m_Layer: 0
+  m_Name: Beatmap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5126,7 +5818,8 @@ MonoBehaviour:
   secPerBeat: 0
   dsptimesong: 0
   beatsShownInAdvance: 0
-  beatmap: {fileID: 997435312}
+  beatmap: {fileID: 1544999756219952083}
+  songMap: {fileID: 11400000, guid: f630e669a16eff84fb773f241c54ada9, type: 2}
   notePrefab: {fileID: 6380820595609815455, guid: 01ebb2d7a8b403a45b4d9dca9ada2c71, type: 3}
   spawnPos: {fileID: 1172766969}
   endPos: {fileID: 1680612073}
@@ -5155,4 +5848,4 @@ SceneRoots:
   - {fileID: 162887088}
   - {fileID: 755380509}
   - {fileID: 1215870905}
-  - {fileID: 997435311}
+  - {fileID: 4352585600084523754}

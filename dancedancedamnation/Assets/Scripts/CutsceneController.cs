@@ -129,8 +129,8 @@ public class CutsceneStep
     public DialogueSequence? dialogue;
     public DialogueSequence? dialogueAlt;
     public string? inputMatch;
-#nullable disable
     public AnimationClip? clip;
+#nullable disable
     public AudioSource audioSource;
     public string sceneName;
     public bool screenShake;
