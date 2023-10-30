@@ -12,7 +12,6 @@ public class MusicNote : MonoBehaviour
     public Vector2 RemovePos;
     public float BeatsShownInAdvance;
     private float beatOfThisNote;
-    private AudioSource arrowSound;
 
     public AnimationClip fadeclip;
 
@@ -50,8 +49,6 @@ public class MusicNote : MonoBehaviour
         inputManager = FindObjectOfType<InputManager>();
         beatOfThisNote = note.pos;
         sr = GetComponent<SpriteRenderer>();
-        arrowSound = GetComponent<AudioSource>();
-
 
 
         switch (note.direction)
@@ -60,25 +57,21 @@ public class MusicNote : MonoBehaviour
                 sr.sprite = leftArrow;
                 SpawnPos += new Vector2(-2 * noteSpacing, 0);
                 RemovePos += new Vector2(-2 * noteSpacing, 0);
-                arrowSound.Play();
                 break;
             case Direction.Down:
                 sr.sprite = downArrow;
                 SpawnPos += new Vector2(-.67f * noteSpacing, 0);
                 RemovePos += new Vector2(-.67f * noteSpacing, 0);
-                arrowSound.Play();
                 break;
             case Direction.Up:
                 sr.sprite = upArrow;
                 SpawnPos += new Vector2(.67f * noteSpacing, 0);
                 RemovePos += new Vector2(.67f * noteSpacing, 0);
-                arrowSound.Play();
                 break;
             case Direction.Right:
                 sr.sprite = rightArrow;
                 SpawnPos += new Vector2(2 * noteSpacing, 0);
                 RemovePos += new Vector2(2 * noteSpacing, 0);
-                arrowSound.Play();
                 break;
             default:
                 // code block

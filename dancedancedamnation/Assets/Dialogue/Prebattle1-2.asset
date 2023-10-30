@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a43cc97c50c7884ab49f2c33257f614, type: 3}
+  m_Name: Prebattle1-2
+  m_EditorClassIdentifier: 
+  lines:
+  - portrait: {fileID: 0}
+    name: Imp
+    line: Huh, I thought we were the only ones.
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: We?
+  - portrait: {fileID: 0}
+    name: Imp
+    line: "Never mind that, how\u2019d you get in here!"
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: Funny lil' thing called a door.
+  - portrait: {fileID: 0}
+    name: Imp
+    line: Snarky, huh?
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: "*Is so done with him* Get out of my way half-pint, I need to show these
+      humans what I\u2019m really made of!\r\n"
+  - portrait: {fileID: 0}
+    name: Imp
+    line: Nuh-uh-uh! No entry.
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: And who are YOU to stop me?
+  - portrait: {fileID: 0}
+    name: Imp
+    line: "The guy who\u2019s running this show!"
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: You? A demon?
+  - portrait: {fileID: 0}
+    name: Imp
+    line: You think you were the first one to come up here and dance to fool everyone?
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: Well- I- Uh...
+  - portrait: {fileID: 0}
+    name: Imp
+    line: Scram kid, no posers here!
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: "Oh, I\u2019ll show you who\u2019s a poser!"

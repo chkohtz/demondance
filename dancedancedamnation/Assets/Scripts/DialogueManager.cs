@@ -22,8 +22,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject textBox;
     public Image portrait;
 
-    public List<Conversation> conversations;
-    public Conversation activeConvo;
+    public List<DialogueSequence> conversations;
+    public DialogueSequence activeConvo;
 
     public bool canAdvance;
     public bool isFinished;
@@ -67,12 +67,12 @@ public class DialogueManager : MonoBehaviour
         NextLine();
     }
 
-    public void StartConversation(Conversation conversation)
+    public void StartConversation(DialogueSequence dialog)
     {
         isFinished = false;
         SetState(true);
         index = 0;
-        activeConvo = conversation;
+        activeConvo = dialog;
         NextLine();
     }
 

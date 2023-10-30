@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.TerrainTools;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SongManager : MonoBehaviour
 {
@@ -15,25 +16,15 @@ public class SongManager : MonoBehaviour
     public float beatsShownInAdvance;
     public Beatmap beatmap;
 
-    [Header("Edit Song")]
-    public float shiftAmount;
-    public float spacing;
-    public Song song;
-
     [Header("Other")]
 
-    [SerializeField]
-    AudioSource audioSource;
+    private AudioSource audioSource;
 
-    
     int nextIndex = 0;
 
     public GameObject notePrefab;
-
     public GameObject spawnPos;
     public GameObject endPos;
-
-    private Queue<MusicNote> activeNotes;
 
     public bool wonGame;
 
@@ -42,15 +33,11 @@ public class SongManager : MonoBehaviour
     public Animator stan;
     public DialogueManager dialogueManager;
 
+    public bool isStaan;
+
     void Start()
     {
-        songPosition = 0;
-        songPosInBeats = 0;
-        secPerBeat = 60f / beatmap.bpm;
-        dsptimesong = (float)AudioSettings.dspTime;
-        audioSource = GetComponent<AudioSource>();
-        audioSource.clip = beatmap.audioClip;
-        audioSource.Play();
+        PlayBeatmap();
     }
 
     void Update()
@@ -79,9 +66,6 @@ public class SongManager : MonoBehaviour
             spawnedNote.SpawnPos = spawnPos.transform.position;
             spawnedNote.RemovePos = endPos.transform.position;
 
-            //activeNotes.Enqueue(spawnedNote);
-            //initialize the fields of the music note
-
             nextIndex++;
         }
 
@@ -95,52 +79,31 @@ public class SongManager : MonoBehaviour
     {
         wonGame = true;
         UnityEngine.Debug.Log("You win!!!");
-        cutsceneControl.gameObject.SetActive(true);
-        dialogueManager.gameObject.SetActive(true);
-        stan.SetBool("dead", true);
 
-    }
 
-    [ContextMenu("Shift Notes (Beatmap)")]
-    public void shiftNotes()
-    {
-        foreach (Note note in beatmap.notes)
+        if (isStaan)
         {
-            note.pos += shiftAmount;
+            stan.SetBool("dead", true);
+            cutsceneControl.gameObject.SetActive(true);
+            dialogueManager.gameObject.SetActive(true);
         }
-        Debug.Log("Beatmap shifted by " + shiftAmount);
-    }
-
-    [ContextMenu("Space Notes (Beatmap)")]
-    public void spaceNotes()
-    {
-        foreach (Note note in beatmap.notes)
+        else
         {
-            note.pos *= spacing;
+            SceneManager.LoadSceneAsync("Staan");
         }
-        Debug.Log("Beatmap spaced out by a factor of" + shiftAmount);
+
     }
 
-    [ContextMenu("Convert Song (old) to Beatmap")]
-    public void convert()
+    void PlayBeatmap()
     {
-        beatmap.bpm = song.bpm;
-        beatmap.audioClip = song.audioClip;
-        beatmap.notes = song.notes;
-        Debug.Log("Song " + song.name + " successfully copied into Beatmap " + beatmap.name);
+        songPosition = 0;
+        songPosInBeats = 0;
+        secPerBeat = 60f / beatmap.bpm;
+        dsptimesong = (float)AudioSettings.dspTime;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = beatmap.audioClip;
+        audioSource.Play();
     }
-}
-
-
-[CreateAssetMenu(fileName = "Data", menuName = "Song", order = 1)]
-public class Song : ScriptableObject
-{
-    public float bpm;
-    public AudioClip audioClip;
-    [SerializeField]
-    public Note[] notes;
-
-    
 }
 
 [System.Serializable]

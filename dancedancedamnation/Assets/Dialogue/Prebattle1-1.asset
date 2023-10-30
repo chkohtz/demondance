@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a43cc97c50c7884ab49f2c33257f614, type: 3}
+  m_Name: Prebattle1-1
+  m_EditorClassIdentifier: 
+  lines:
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: Holy shit! This is perfect!
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: Finally a place to show them a demon like me can be a dancer!
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: "Hey, wait a minute\u2026"
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: A demon? DJ-ing here? What is this place? These are all humans...
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: "How is he getting away with this\u2026"

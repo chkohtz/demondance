@@ -61,9 +61,6 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     public AudioSource missSound;
 
-    private bool needLeft, needRight, needUp, needDown;
-    private bool presssedLeft, pressedRight, pressedUp, pressedDown;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -119,30 +116,6 @@ public class InputManager : MonoBehaviour
         }
         if (hitColliders.Length > 0)
         {
-            foreach (Collider2D collider in hitColliders)
-            {
-                needLeft = false;
-                needRight = false;
-                needUp = false;
-                needDown = false;
-
-                MusicNote musicNote = collider.gameObject.GetComponent<MusicNote>();
-                switch (musicNote.note.direction)
-                {
-                    case Direction.Up:
-                        needUp = true;
-                        break;
-                    case Direction.Down:
-                        needDown = true;
-                        break;
-                    case Direction.Left:
-                        needLeft = true;
-                        break;
-                    case Direction.Right:
-                        needRight = true;
-                        break;
-                }
-            }
             foreach (Collider2D collider in hitColliders)
             {
                 MusicNote musicNote = collider.gameObject.GetComponent<MusicNote>();

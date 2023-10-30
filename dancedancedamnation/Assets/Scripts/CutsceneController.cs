@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class CutsceneController : MonoBehaviour
 {
     [SerializeField]
-    public List<Cutscene> cutsceneList;
+    public List<CutsceneStep> cutsceneList;
     private Image currentImage;
     [SerializeField]
     public DialogueManager dialogueManager;
@@ -42,7 +42,7 @@ public class CutsceneController : MonoBehaviour
 
         if (!receivingInput)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && dialogueManager.isFinished && stepIndex <= cutsceneList[cutsceneIndex].steps.Count)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && dialogueManager.isFinished && stepIndex <= cutsceneList.Count)
                 AdvanceStep();
         }
     }
@@ -52,7 +52,7 @@ public class CutsceneController : MonoBehaviour
         Debug.Log("advance step: " + stepIndex);
 
         paused = false;
-        if (stepIndex >= cutsceneList[cutsceneIndex].steps.Count)
+        if (stepIndex >= cutsceneList.Count)
         {
             //TODO: end cutscene
             stepIndex = 0;
@@ -60,7 +60,7 @@ public class CutsceneController : MonoBehaviour
             Debug.Log("OwO");
             return;
         }
-        CutsceneStep step = cutsceneList[cutsceneIndex].steps[stepIndex];
+        CutsceneStep step = cutsceneList[stepIndex];
 
         stepIndex++;
 
@@ -70,15 +70,18 @@ public class CutsceneController : MonoBehaviour
         switch (step.type) {
             case StepType.Dialog:
                 paused = true;
+                dialogueManager.SetState(true);
                 dialogueManager.StartConversation(step.dialogue);
                 if(step.clip != null)
                     bgImage.GetComponent<Animator>().Play(step.clip.name);
                 break;
             case StepType.ImageChange:
+                dialogueManager.SetState(false);
                 dialogueManager.isFinished = true;
                 bgImage.GetComponent<Animator>().Play(step.clip.name);
                 break;
             case StepType.Input:
+                stepIndex--;
                 receivingInput = true;
                 dialogueManager.SetState(false);
                 inputField.SetActive(true);
@@ -103,7 +106,18 @@ public class CutsceneController : MonoBehaviour
         input = inputField.GetComponent<TMP_InputField>().text;
         inputField.SetActive (false);
         receivingInput = false;
-        AdvanceStep();
+
+        CutsceneStep step = cutsceneList[stepIndex];
+        paused = true;
+        dialogueManager.SetState(true);
+        if(step.inputMatch.Equals(input))
+            dialogueManager.StartConversation(step.dialogue);
+        else
+            dialogueManager.StartConversation(step.dialogueAlt);
+        if (step.clip != null)
+            bgImage.GetComponent<Animator>().Play(step.clip.name);
+        stepIndex++;
+
     }
 }
 
@@ -112,7 +126,9 @@ public class CutsceneStep
 {
     public StepType type;
 #nullable enable
-    public Conversation? dialogue;
+    public DialogueSequence? dialogue;
+    public DialogueSequence? dialogueAlt;
+    public string? inputMatch;
 #nullable disable
     public AnimationClip? clip;
     public AudioSource audioSource;

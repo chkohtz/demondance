@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a43cc97c50c7884ab49f2c33257f614, type: 3}
+  m_Name: Scene1-1
+  m_EditorClassIdentifier: 
+  lines:
+  - portrait: {fileID: 0}
+    name: Lilith
+    line: Ugh, finally. Out of that damned underworld.
+  - portrait: {fileID: 0}
+    name: Lilith
+    line: It was getting too stuffy. No room to show off like I should.
+  - portrait: {fileID: 0}
+    name: Lilith
+    line: "Doesn\u2019t help that demons are barely allowed out. But not be allowed
+      to dance? Ugh, save your crap for a stupider demon"
+  - portrait: {fileID: 0}
+    name: Lilith
+    line: "Hmm. Wonder if there\u2019s anywhere better to do my thing.\r\n\r\n"

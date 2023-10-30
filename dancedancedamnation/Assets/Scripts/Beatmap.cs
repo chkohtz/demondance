@@ -2,13 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Beatmap", menuName = "Beatmap", order = 1)]
-public class Beatmap : ScriptableObject
+public class Beatmap : MonoBehaviour
 {
-    public float bpm;
+    [Header("Beatmap")]
     public AudioClip audioClip;
+    public float bpm;
     [SerializeField]
     public Note[] notes;
 
+    [Header("Edit")]
+    public float shiftAmount;
+    public float spacing;
+
+    [ContextMenu("Shift Notes (Beatmap)")]
+    public void shiftNotes()
+    {
+        foreach (Note note in notes)
+        {
+            note.pos += shiftAmount;
+        }
+        Debug.Log("Beatmap shifted by " + shiftAmount);
+    }
+
+    [ContextMenu("Space Notes (Beatmap)")]
+    public void spaceNotes()
+    {
+        foreach (Note note in notes)
+        {
+            note.pos *= spacing;
+        }
+        Debug.Log("Beatmap spaced out by a factor of" + shiftAmount);
+    }
+
+    public void writeToFile()
+    {
+
+    }
 
 }

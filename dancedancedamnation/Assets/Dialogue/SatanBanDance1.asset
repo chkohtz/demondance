@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: NameInputted
-  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  m_Script: {fileID: 11500000, guid: 1a43cc97c50c7884ab49f2c33257f614, type: 3}
+  m_Name: SatanBanDance1
+  m_EditorClassIdentifier: 
   lines:
   - portrait: {fileID: 0}
-    name: Lilith
-    line: "No, that\u2019s a dumb ass nickname. Who asked you anyways!?"
+    name: 
+    line: 'Long ago, Stan, the leader of the underworld
+
+'
   - portrait: {fileID: 0}
-    name: Lily
-    line: "Lily\u2019s close enough!"
+    name: 
+    line: "Declared that no citizen of hell shall, under any circumstances\u2026\n"

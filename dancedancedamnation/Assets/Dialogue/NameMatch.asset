@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3056b07ffbebad448d3e68a02f6aba3, type: 3}
-  m_Name: OdeToJoy
+  m_Script: {fileID: 11500000, guid: 1a43cc97c50c7884ab49f2c33257f614, type: 3}
+  m_Name: NameMatch
   m_EditorClassIdentifier: 
-  bpm: 0
-  audioClip: {fileID: 0}
-  notes: []
+  lines:
+  - portrait: {fileID: 0}
+    name: LXLY
+    line: "You fuckin\u2019 idiot, I was gonna come up with that first!"

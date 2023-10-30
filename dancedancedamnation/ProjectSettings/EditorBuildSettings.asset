@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RhythmPrototype.unity
     guid: aeb7439275ccc9c4296e25a2cf3e001d
+  - enabled: 1
+    path: Assets/Scenes/Staan.unity
+    guid: 3a06a0ebf521e584b88136f7741e53f5
   m_configObjects: {}
