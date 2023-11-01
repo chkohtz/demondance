@@ -15,9 +15,7 @@ MonoBehaviour:
   lines:
   - portrait: {fileID: 0}
     name: 
-    line: 'Dance
-
-'
+    line: DANCE!
   - portrait: {fileID: 0}
     name: 
     line: 'But dictum be damned...

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Scene1-1
   m_EditorClassIdentifier: 
   lines:
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: Lilith
     line: Ugh, finally. Out of that damned underworld.
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: Lilith
     line: It was getting too stuffy. No room to show off like I should.
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: Lilith
     line: "Doesn\u2019t help that demons are barely allowed out. But not be allowed
       to dance? Ugh, save your crap for a stupider demon"
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: Lilith
     line: "Hmm. Wonder if there\u2019s anywhere better to do my thing.\r\n\r\n"

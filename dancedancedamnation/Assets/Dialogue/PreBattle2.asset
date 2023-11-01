@@ -13,53 +13,53 @@ MonoBehaviour:
   m_Name: PreBattle2
   m_EditorClassIdentifier: 
   lines:
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: LXLY
     line: '*huff* *huff* That was too easy, you little shit!'
   - portrait: {fileID: 0}
     name: Imp
     line: NO, NO, NO! Defeated by a lowly demon like you!?
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: ???
     line: "Oh come now, what\u2019s all the ruckus?"
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: ???
     line: "Well, well, well\u2026 another dense runaway\u2026"
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: LXLY
     line: Dense runaway!? And who the hell are you?
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: Staan
     line: Call me Staan, honey, and pick your jaw up off the floor, bugs may fly
       in.
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: LXLY
     line: No honeys here, bitch.
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: LXLY
     line: Like me!? You got this little demon guy here doing your grunt work!!
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: Staan
     line: "And he\u2019ll keep doing it so long as we keep these people fooled..."
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: LXLY
     line: How are you even doing that?
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: Staan
     line: Oh, the folly of man and their inability to realize the power of dancing.
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: Staan
     line: "Dance well enough and you\u2019re practically one of them."
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: Staan
     line: "Dance well enough and you\u2019re practically one of them."
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: Staan
     line: "Careful, now. They may realize you aren\u2019t one too\u2026"
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: 9135da0668619634abfb51fb6c431c9e, type: 3}
     name: LXLY
     line: "How\u2019d you know!?"
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: a95bfb897d6e50a4c92d4de4d6843905, type: 3}
     name: Staan
     line: "Oh, I know much, darling. Now scram, please, you\u2019re dirtying up the
       place."
