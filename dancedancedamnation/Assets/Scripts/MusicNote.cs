@@ -79,6 +79,13 @@ public class MusicNote : MonoBehaviour
 
     }
 
+    public void FadeOut()
+    {
+        isDead = true;
+        animator.speed = 0.1f;
+        animator.Play("fade");
+    }
+
     public void Kill()
     {
         isDead = true;

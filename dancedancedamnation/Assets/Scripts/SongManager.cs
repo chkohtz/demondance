@@ -98,6 +98,16 @@ public class SongManager : MonoBehaviour
 
     }
 
+    public void FadeNotes()
+    {
+        MusicNote[] notes = FindObjectsOfType<MusicNote>();
+        foreach (MusicNote note in notes)
+        {
+            //if (note.gameObject.layer.Equal)
+                //note.FadeOut();
+        }
+    }
+
     void PlayBeatmap()
     {
         songPosition = 0;
