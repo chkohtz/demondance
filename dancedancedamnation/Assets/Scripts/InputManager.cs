@@ -20,9 +20,6 @@ public class InputManager : MonoBehaviour
 
     public GameOverController gameOverController;
 
-
-
-
     [SerializeField]
     public PlayerAnimator playerAnim;
 

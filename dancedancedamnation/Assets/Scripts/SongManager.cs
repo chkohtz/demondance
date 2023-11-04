@@ -103,8 +103,7 @@ public class SongManager : MonoBehaviour
         MusicNote[] notes = FindObjectsOfType<MusicNote>();
         foreach (MusicNote note in notes)
         {
-            //if (note.gameObject.layer.Equal)
-                //note.FadeOut();
+                note.FadeOut();
         }
     }
 

@@ -27,10 +27,9 @@ public class GameOverController : MonoBehaviour
         if (game_over)
             gameObject.SetActive(true);
     }
-
+    
     public void OnGameOver()
     {
-
         this.gameObject.SetActive(true);
         if (!game_over)
         {
@@ -45,6 +44,7 @@ public class GameOverController : MonoBehaviour
 
             songManager.GetComponent<AudioSource>().PlayOneShot(boos);
             songManager.FadeNotes();
+            this.gameObject.SetActive(true);
 
             playerAnimator.SetBool("lose", true);
             playerAnimator.speed = 0;

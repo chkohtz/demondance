@@ -38,6 +38,7 @@ public class MusicNote : MonoBehaviour
     public bool isDead = false;
     public Animator animator;
 
+
     // Start is called before the first frame update
     void Start()
     {
